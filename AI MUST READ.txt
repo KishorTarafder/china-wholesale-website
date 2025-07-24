@@ -1,0 +1,991 @@
+this is my site idea 
+
+
+Directory: /
+  [Folder] home/
+  [Folder] about-us/
+  [Folder] services/
+  [Folder] contact/
+  [Folder] service-query-form/
+  [Folder] my-account/
+
+Directory: home
+  [Folder] components/
+  [File] index.jsx (856 bytes)
+    Preview:
+      import React from "react";
+      import { Navbar6 } from "./components/Navbar6";
+      import { Header71 } from "./components/Header71";
+      import { Layout24 } from "./components/Layout24";
+      import { Layout239 } from "./components/Layout239";
+      import { Layout245 } from "./components/Layout245";
+      import { Logo2 } from "./components/Logo2";
+      import { Layout238 } from "./components/Layout238";
+      import { Layout10 } from "./components/Layout10";
+      import { Contact20 } from "./components/Contact20";
+
+Directory: home/components
+  [File] Layout24.jsx (1461 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      
+      export function Layout24() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+                <div>
+  [File] Layout238.jsx (3403 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Layout238() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+  [File] Layout10.jsx (2991 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Layout10() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+  [File] Layout239.jsx (3649 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Layout239() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+  [File] Logo2.jsx (2211 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      
+      export function Logo2() {
+        return (
+          <section id="relume" className="px-[5%] py-12 md:py-16 lg:py-20">
+            <div className="container grid grid-cols-1 items-start justify-start gap-x-12 gap-y-8 md:grid-cols-[max-content_1fr] md:items-center md:justify-between md:gap-y-4 lg:gap-x-16">
+              <h1 className="leading-[1.2] font-bold md:max-w-[16rem] md:text-md md:leading-[1.2] lg:max-w-xxs">
+                Trusted by top brands across various industries
+  [File] Contact4.jsx (4801 bytes)
+    Preview:
+      "use client";
+      
+      import {
+        Button,
+        Checkbox,
+        Input,
+        Label,
+        RadioGroup,
+        RadioGroupItem,
+        Select,
+  [File] Header71.jsx (1399 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      
+      export function Header71() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="flex flex-col">
+  [File] Layout245.jsx (3301 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Layout245() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+  [File] Contact20.jsx (2530 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
+      
+      export function Contact20() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="rb-12 mx-auto mb-12 flex max-w-lg flex-col justify-center text-center md:mb-18 lg:mb-20">
+  [File] Footer5.jsx (9095 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, Input } from "@relume_io/relume-ui";
+      import React, { useState } from "react";
+      import {
+        BiLogoFacebookCircle,
+        BiLogoInstagram,
+        BiLogoLinkedinSquare,
+        BiLogoYoutube,
+      } from "react-icons/bi";
+  [File] Navbar6.jsx (43224 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, useMediaQuery } from "@relume_io/relume-ui";
+      import { AnimatePresence, motion } from "framer-motion";
+      import React, { useState } from "react";
+      import { RxChevronDown, RxChevronRight } from "react-icons/rx";
+      
+      const useRelume = () => {
+        const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+        const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+Directory: about-us
+  [Folder] components/
+  [File] index.jsx (631 bytes)
+    Preview:
+      import React from "react";
+      import { Navbar6 } from "./components/Navbar6";
+      import { Header47 } from "./components/Header47";
+      import { Layout41 } from "./components/Layout41";
+      import { Layout352 } from "./components/Layout352";
+      import { Gallery7 } from "./components/Gallery7";
+      import { Logo4 } from "./components/Logo4";
+      import { Logo1 } from "./components/Logo1";
+      import { Footer5 } from "./components/Footer5";
+      
+
+Directory: about-us/components
+  [File] Logo1.jsx (2495 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      
+      export function Logo1() {
+        return (
+          <section id="relume" className="px-[5%] py-12 md:py-16 lg:py-20">
+            <div className="container">
+              <h1 className="mx-auto mb-6 w-full max-w-lg text-center text-base leading-[1.2] font-bold md:mb-8 md:text-md md:leading-[1.2]">
+                Trusted by top brands across the globe
+  [File] Header47.jsx (1278 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      
+      export function Header47() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="flex flex-col gap-5 md:flex-row md:gap-12 lg:gap-20">
+  [File] Layout41.jsx (1494 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Layout41() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+  [File] Logo4.jsx (4079 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Logo4() {
+        return (
+          <section id="relume" className="px-[5%] py-12 md:py-16 lg:py-20">
+            <div className="container">
+  [File] Gallery7.jsx (1924 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      
+      export function Gallery7() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="mb-12 text-center md:mb-18 lg:mb-20">
+                <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+  [File] Footer5.jsx (9095 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, Input } from "@relume_io/relume-ui";
+      import React, { useState } from "react";
+      import {
+        BiLogoFacebookCircle,
+        BiLogoInstagram,
+        BiLogoLinkedinSquare,
+        BiLogoYoutube,
+      } from "react-icons/bi";
+  [File] Layout352.jsx (19706 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import { motion, useScroll, useTransform } from "framer-motion";
+      import React, { useRef } from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      const useAnimation = (projects) => {
+        const refs = timelineItems.map(() => useRef(null));
+        const computedStyles = refs.map((ref) => {
+  [File] Navbar6.jsx (43224 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, useMediaQuery } from "@relume_io/relume-ui";
+      import { AnimatePresence, motion } from "framer-motion";
+      import React, { useState } from "react";
+      import { RxChevronDown, RxChevronRight } from "react-icons/rx";
+      
+      const useRelume = () => {
+        const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+        const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+Directory: services
+  [Folder] components/
+  [File] index.jsx (700 bytes)
+    Preview:
+      import React from "react";
+      import { Navbar6 } from "./components/Navbar6";
+      import { Header44 } from "./components/Header44";
+      import { Layout10 } from "./components/Layout10";
+      import { Layout24 } from "./components/Layout24";
+      import { Layout6 } from "./components/Layout6";
+      import { Layout192 } from "./components/Layout192";
+      import { Layout3 } from "./components/Layout3";
+      import { Cta7 } from "./components/Cta7";
+      import { Footer5 } from "./components/Footer5";
+
+Directory: services/components
+  [File] Layout24.jsx (1385 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      
+      export function Layout24() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+                <div>
+  [File] Layout10.jsx (3029 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Layout10() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+  [File] Layout3.jsx (1145 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      
+      export function Layout3() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+                <div>
+  [File] Header44.jsx (938 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      
+      export function Header44() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="w-full max-w-lg">
+  [File] Layout192.jsx (1723 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Layout192() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+  [File] Cta7.jsx (1020 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      
+      export function Cta7() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container grid w-full grid-cols-1 items-start justify-between gap-6 md:grid-cols-[1fr_max-content] md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+              <div className="md:mr-12 lg:mr-0">
+  [File] Layout6.jsx (1871 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      
+      export function Layout6() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="grid grid-cols-1 gap-y-12 md:grid-flow-row md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+                <div>
+  [File] Footer5.jsx (9095 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, Input } from "@relume_io/relume-ui";
+      import React, { useState } from "react";
+      import {
+        BiLogoFacebookCircle,
+        BiLogoInstagram,
+        BiLogoLinkedinSquare,
+        BiLogoYoutube,
+      } from "react-icons/bi";
+  [File] Navbar6.jsx (43224 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, useMediaQuery } from "@relume_io/relume-ui";
+      import { AnimatePresence, motion } from "framer-motion";
+      import React, { useState } from "react";
+      import { RxChevronDown, RxChevronRight } from "react-icons/rx";
+      
+      const useRelume = () => {
+        const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+        const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+Directory: contact
+  [Folder] components/
+  [File] index.jsx (571 bytes)
+    Preview:
+      import React from "react";
+      import { Navbar6 } from "./components/Navbar6";
+      import { Header46 } from "./components/Header46";
+      import { Contact13 } from "./components/Contact13";
+      import { Contact1 } from "./components/Contact1";
+      import { Faq1 } from "./components/Faq1";
+      import { Contact16 } from "./components/Contact16";
+      import { Footer5 } from "./components/Footer5";
+      
+      export default function Page() {
+
+Directory: contact/components
+  [File] Contact1.jsx (1916 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, Checkbox, Input, Label, Textarea } from "@relume_io/relume-ui";
+      import React from "react";
+      
+      export function Contact1() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container max-w-lg">
+              <div className="mx-auto mb-8 w-full max-w-lg text-center md:mb-10 lg:mb-12">
+  [File] Header46.jsx (557 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      
+      export function Header46() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="w-full max-w-lg">
+                <h1 className="mb-5 text-6xl font-bold md:mb-6 md:text-9xl lg:text-10xl">
+  [File] Faq1.jsx (3436 bytes)
+    Preview:
+      "use client";
+      
+      import {
+        Accordion,
+        AccordionContent,
+        AccordionItem,
+        AccordionTrigger,
+        Button,
+      } from "@relume_io/relume-ui";
+      import React from "react";
+  [File] Contact13.jsx (2802 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Contact13() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+  [File] Contact16.jsx (2853 bytes)
+    Preview:
+      "use client";
+      
+      import React from "react";
+      import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
+      
+      export function Contact16() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div>
+  [File] Footer5.jsx (9095 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, Input } from "@relume_io/relume-ui";
+      import React, { useState } from "react";
+      import {
+        BiLogoFacebookCircle,
+        BiLogoInstagram,
+        BiLogoLinkedinSquare,
+        BiLogoYoutube,
+      } from "react-icons/bi";
+  [File] Navbar6.jsx (43224 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, useMediaQuery } from "@relume_io/relume-ui";
+      import { AnimatePresence, motion } from "framer-motion";
+      import React, { useState } from "react";
+      import { RxChevronDown, RxChevronRight } from "react-icons/rx";
+      
+      const useRelume = () => {
+        const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+        const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+Directory: service-query-form
+  [Folder] components/
+  [File] index.jsx (442 bytes)
+    Preview:
+      import React from "react";
+      import { Navbar6 } from "./components/Navbar6";
+      import { Contact25 } from "./components/Contact25";
+      import { Header44 } from "./components/Header44";
+      import { Contact2 } from "./components/Contact2";
+      import { Footer5 } from "./components/Footer5";
+      
+      export default function Page() {
+        return (
+          <div>
+
+Directory: service-query-form/components
+  [File] Contact2.jsx (4849 bytes)
+    Preview:
+      "use client";
+      
+      import {
+        Button,
+        Checkbox,
+        Input,
+        Label,
+        RadioGroup,
+        RadioGroupItem,
+        Select,
+  [File] Header44.jsx (909 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      
+      export function Header44() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="w-full max-w-lg">
+  [File] Contact25.jsx (2934 bytes)
+    Preview:
+      "use client";
+      
+      import { Button } from "@relume_io/relume-ui";
+      import React from "react";
+      import { RxChevronRight } from "react-icons/rx";
+      
+      export function Contact25() {
+        return (
+          <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+            <div className="container">
+  [File] Footer5.jsx (9095 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, Input } from "@relume_io/relume-ui";
+      import React, { useState } from "react";
+      import {
+        BiLogoFacebookCircle,
+        BiLogoInstagram,
+        BiLogoLinkedinSquare,
+        BiLogoYoutube,
+      } from "react-icons/bi";
+  [File] Navbar6.jsx (43224 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, useMediaQuery } from "@relume_io/relume-ui";
+      import { AnimatePresence, motion } from "framer-motion";
+      import React, { useState } from "react";
+      import { RxChevronDown, RxChevronRight } from "react-icons/rx";
+      
+      const useRelume = () => {
+        const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+        const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+Directory: my-account
+  [Folder] components/
+  [File] index.jsx (232 bytes)
+    Preview:
+      import React from "react";
+      import { Navbar6 } from "./components/Navbar6";
+      import { Footer5 } from "./components/Footer5";
+      
+      export default function Page() {
+        return (
+          <div>
+            <Navbar6 />
+            <Footer5 />
+          </div>
+
+Directory: my-account/components
+  [File] Footer5.jsx (9095 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, Input } from "@relume_io/relume-ui";
+      import React, { useState } from "react";
+      import {
+        BiLogoFacebookCircle,
+        BiLogoInstagram,
+        BiLogoLinkedinSquare,
+        BiLogoYoutube,
+      } from "react-icons/bi";
+  [File] Navbar6.jsx (43224 bytes)
+    Preview:
+      "use client";
+      
+      import { Button, useMediaQuery } from "@relume_io/relume-ui";
+      import { AnimatePresence, motion } from "framer-motion";
+      import React, { useState } from "react";
+      import { RxChevronDown, RxChevronRight } from "react-icons/rx";
+      
+      const useRelume = () => {
+        const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+        const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+
+
+
+
+
+
+    
+
+    other info /
+
+
+    🔴 Primary Color – Logo Orange-Red
+Hex: #E3431F
+Use for: Buttons, icons, highlights, headlines
+
+⚫ Secondary Color – Deep Black
+Hex: #000000
+Use for: Text, footer background, strong contrast sections
+
+⚪ Background Color – Clean White
+Hex: #FFFFFF
+Use for: General background and section clarity
+
+⚙ Neutral Gray (Optional)
+Hex: #F2F2F2
+Use for: Section dividers, form fields, or subtle backgrounds
+
+
+
+🏠 Home (Hero Section)
+Headline:
+ China to Bangladesh — Simplified Sourcing. Delivered with Confidence.
+Subheadline:
+ Your trusted sourcing partner for verified products, smooth logistics, and seamless delivery — from the world’s largest marketplace to your doorstep.
+CTA Buttons:
+ ➡️ Get a Free Quote 	➡️ How We Work
+
+👤 About Us
+Who We Are
+ China Wholesale is a Bangladesh-based sourcing and logistics company helping individuals and businesses procure quality products directly from China. Whether you're buying in bulk, launching a new product line, or fulfilling a custom order — we handle everything from sourcing to delivery.
+What Sets Us Apart
+Deep supplier network across 1688, Taobao, WeChat, and Alibaba
+
+
+Transparent communication throughout the process
+
+
+Reliable, time-bound shipping by air, sea, or luggage
+
+
+Local support and last-mile delivery in Bangladesh
+
+
+"Our mission is to make global procurement easy, affordable, and reliable for every Bangladeshi entrepreneur."
+
+🛠️ Our Services
+🔍 Product Sourcing
+ We find your desired products from verified Chinese suppliers, negotiate prices, and ensure quality and compliance.
+📦 Consolidation & Packaging
+ All your orders, even from different suppliers, are collected, carefully packed, and prepared for international shipment.
+🚢 Shipping Solutions
+ Choose from:
+Air Freight (Fastest)
+
+
+Sea Freight (Cost-effective for bulk)
+
+
+Luggage / Hand-Carry (Urgent small packages)
+
+
+✅ Quality Control & Inspection
+ Every order is visually inspected, verified, and shared with you before shipment.
+🧾 Custom Order & Pre-order Handling
+ We manage custom projects, prototypes, and pre-orders with attention to detail and clear communication.
+
+🔄 How We Work
+Our 6-Step Process
+Requirement Collection
+ Share your product details, budget, and timeline with our team.
+
+
+Supplier Search & Quotation
+ We source from verified platforms and provide detailed quotations with images and specs.
+
+
+Order Confirmation & Payment
+ Once you approve, we proceed with procurement and inspection.
+
+
+Packaging & Shipping
+ Your goods are consolidated and shipped via your preferred method.
+
+
+Customs Clearance
+ We manage all import formalities and updates during transit.
+
+
+Delivery to You
+ Your package is delivered to your doorstep or preferred pickup location in Bangladesh.
+
+
+
+🤝 Clients Served
+We’ve proudly worked with over 200 businesses — from startups to established brands.
+Client Sectors:
+Fashion & Accessories
+
+
+Electronics & Gadgets
+
+
+Home & Lifestyle
+
+
+F-Commerce & Online Stores
+
+
+Corporate Gift Suppliers
+
+
+“China Wholesale has been our reliable sourcing partner for over two years. Transparent, fast, and dependable.”
+ — M.S. Traders
+
+💡 Why Choose Us
+✔ Verified Sourcing
+ We source directly from trusted suppliers with a focus on quality and authenticity.
+✔ Seamless End-to-End Service
+ We handle everything — so you don’t have to worry.
+✔ Flexible Shipping Options
+ Air, sea, luggage — we offer what fits your time and budget.
+✔ Transparent Pricing
+ No hidden charges. What we quote is what you pay.
+✔ Strong BD Support
+ We’re based in Bangladesh — easy communication and support even after delivery.
+
+📞 Contact Us
+Ready to source your next product? Let’s talk.
+ Use the form below or connect directly.
+📧 Email: support@chinawholesale.com.bd
+
+📞 Phone: +880XXXXXXXXXX
+💬 WhatsApp: Click to Chat
+📍 Office: Ramzannessa Super Market, Pallabi, Mirpur 12, Dhaka
+Contact Form:
+Name
+
+
+Phone Number
+
+
+Product Requirement
+
+
+Upload Sample Image (optional)
+
+
+Submit
+
+
+
+Would you like this turned into a design prototype (Figma/wireframe)? Or shall I help you prepare the HTML version with scrolling menu anchors and clean styling?
+You said:
+can you give me full written contents all the the things? i need all and then I will give this to my developer team
+2/2
+ChatGPT said:
+Absolutely! Below is the full written content of your one-page corporate website for chinawholesale.com.bd, section by section, with headings, descriptions, and call-to-actions — ready to hand over to your developer.
+
+🌐 Full Website Content for chinawholesale.com.bd
+
+🔝 Navigation Menu (Anchor Links)
+css
+CopyEdit
+[Home] [About Us] [Services] [How We Work] [Clients] [Why Us] [Contact]
+
+
+🏠 HOME (Hero Section)
+Main Headline:
+ From China to Bangladesh — Your Reliable Sourcing & Shipping Partner
+Subheadline:
+ We make product sourcing and logistics from China easy, efficient, and risk-free for Bangladeshi businesses and individuals. From finding suppliers to doorstep delivery — we handle everything for you.
+Call-to-Action Buttons:
+ ➡️ Get a Free Quote
+ ➡️ See How We Work
+
+👤 ABOUT US
+Who We Are
+ Welcome to China Wholesale — a trusted one-stop solution for sourcing, procurement, and logistics from China to Bangladesh. We help individuals, entrepreneurs, and businesses of all sizes get the products they need directly from Chinese suppliers with full transparency and support.
+Our Journey
+ Founded with the vision to simplify global procurement, we have successfully served hundreds of clients across various industries. With deep roots in both China and Bangladesh, we bridge the gap between trusted manufacturers and smart buyers.
+Our Core Values:
+Reliability in Every Step
+
+
+Transparent Communication
+
+
+Focused on Quality
+
+
+Long-Term Partnerships
+
+
+Our Mission:
+ To empower Bangladeshi businesses by providing smooth and secure access to the global marketplace.
+
+🛠️ OUR SERVICES
+We offer a full suite of services tailored to make international sourcing simple and efficient:
+🔍 Product Sourcing
+Sourcing from 1688, Taobao, Alibaba, and WeChat
+
+
+Supplier verification and background check
+
+
+Price and MOQ negotiation
+
+
+✅ Quality Control & Inspection
+Pre-shipment visual inspection
+
+
+Sample check and approval support
+
+
+Sharing photos/videos for confirmation
+
+
+📦 Consolidation & Packaging
+Collecting orders from multiple sellers
+
+
+Safe and efficient packaging
+
+
+Reducing volume for shipping cost optimization
+
+
+🚢 Shipping Solutions
+Air freight for fast delivery
+
+
+Sea freight for large volumes
+
+
+Hand-carry (luggage) for small urgent parcels
+
+
+🧾 Custom Order & Pre-order Support
+Handling custom designs or OEM products
+
+
+Coordinating special order requirements
+
+
+Supporting f-commerce sellers and retailers
+
+
+
+🔄 HOW WE WORK
+Our process is simple, streamlined, and designed to ensure quality and timely delivery:
+Step 1: Requirement Collection
+You share your product name, specifications, photos, and quantity.
+Step 2: Supplier Sourcing & Quotation
+We search verified suppliers and send you product options with details and pricing.
+Step 3: Order Confirmation & Payment
+After you approve, we proceed with purchase, inspect items, and confirm packaging.
+Step 4: Shipment
+We ship your package via air, sea, or luggage as per your preference.
+Step 5: Customs & Documentation
+We handle the customs clearance and related formalities.
+Step 6: Delivery in Bangladesh
+Final delivery to your doorstep or pickup point anywhere in Bangladesh.
+Throughout this process, we maintain constant communication so you're always in control.
+
+🤝 CLIENTS SERVED
+We are proud to have served over 200+ businesses and individuals across the country.
+Industries We Work With:
+Fashion & Apparel
+
+
+Electronics & Accessories
+
+
+Cosmetics & Health
+
+
+Home & Kitchen
+
+
+Corporate Gifts
+
+
+E-commerce & F-commerce
+
+
+Client Testimonials:
+“Fast delivery, professional updates, and zero product issues. Highly recommended!”
+ — Arif Trading
+“Thanks to China Wholesale, we now import confidently every month.”
+ — Diva Store BD
+“Trustworthy service for our large corporate orders.”
+ — TechLab Bangladesh
+
+💡 WHY CHOOSE US
+✅ Trusted Sourcing from China
+We connect you to verified sellers on 1688, WeChat, Alibaba, and Taobao.
+✅ Complete End-to-End Service
+From product search to customs clearance — we take care of everything.
+✅ Flexible Shipping Options
+Choose air, sea, or hand-carry depending on urgency and budget.
+✅ Transparent Pricing
+No hidden costs. You’ll know what you’re paying for at every step.
+✅ Local Support in Bangladesh
+We are available before, during, and after delivery — via phone, WhatsApp, or office visit.
+✅ Personalized Service
+Every client is important. We treat your order with care — whether big or small.
+
+📞 CONTACT US
+We’d love to hear from you! Whether you have a question or are ready to start your sourcing journey — get in touch.
+📧 Email:
+support@chinawholesale.com.bd
+📞 Phone:
++8801XXXXXXXXX
+💬 WhatsApp:
+Click here to chat instantly
+🏢 Office Address:
+3rd Floor, Ramzannessa Super Market, Pallabi, Mirpur 12, Dhaka, Bangladesh
+
+📋 Contact Form:
+Name
+
+
+Phone Number
+
+
+Email
+
+
+Your Requirement
+
+
+Upload Product Image (optional)
+
+
+[Submit]
+
+
+
+🔚 Footer (Optional Content)
+© 2025 China Wholesale. All Rights Reserved.
+ Sourcing | Shipping | Delivery
+ [Facebook] [Instagram] [WhatsApp] [LinkedIn]
+
+
+
+
+ill be usiNG 
+
+
+React + tailwind for frontend development
+
+xml
+json
+
+php
+python
+mysql
+
+
+https://chwh.store/backend/api/health ---test api this will be my demo api , it needed to be in a sperate file 
+
+remeber it will be corporate  website so everything  has to be perfecwt , and on diff component , cuz duiff devs will worke on it  , and must 
+be commneted on properly "
