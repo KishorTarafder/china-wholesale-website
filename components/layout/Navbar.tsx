@@ -27,6 +27,7 @@ import {
   MessageCircle,
   ArrowRight 
 } from 'lucide-react';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 // Navigation menu items configuration
 const navigationItems = [
@@ -223,7 +224,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
   return (
     <nav
       className={`
-        ${isScrolled ? 'navbar-sticky shadow-lg' : 'bg-white border-b border-gray-100'}
+        ${isScrolled ? 'navbar-sticky shadow-lg' : 'bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-700'}
         transition-all duration-300 z-50 relative
         ${className}
       `}
@@ -245,10 +246,10 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-lg lg:text-xl font-bold text-brand-secondary">
+              <h1 className="text-lg lg:text-xl font-bold text-brand-secondary dark:text-gray-50">
                 China Wholesale
               </h1>
-              <p className="text-xs text-gray-500 -mt-1">Trusted Sourcing Partner</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 -mt-1">Trusted Sourcing Partner</p>
             </div>
           </Link>
 
@@ -302,13 +303,13 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50"
+                        className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-gray-800/95 rounded-xl shadow-lg border border-gray-100 dark:border-gray-600/50 py-2 z-50 dark:shadow-gray-900/50"
                       >
                         {item.submenu.map((subItem) => (
                           <button
                             key={subItem.label}
                             onClick={() => handleSmoothScroll(subItem.href)}
-                            className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:text-brand-primary hover:bg-gray-50 transition-colors duration-200"
+                            className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:text-brand-primary hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200"
                           >
                             {subItem.label}
                           </button>
@@ -326,7 +327,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             {/* Phone Button */}
             <button
               onClick={() => window.open('tel:+8801XXXXXXXXX', '_self')}
-              className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-brand-primary transition-colors duration-200"
+              className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-brand-primary dark:text-gray-300 dark:hover:text-brand-primary transition-colors duration-200"
             >
               <Phone className="w-4 h-4" />
               <span className="hidden xl:block">Call Us</span>
@@ -335,11 +336,16 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             {/* WhatsApp Button */}
             <button
               onClick={handleWhatsAppContact}
-              className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-green-600 hover:text-green-700 transition-colors duration-200"
+              className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 transition-colors duration-200"
             >
               <MessageCircle className="w-4 h-4" />
               <span className="hidden xl:block">WhatsApp</span>
             </button>
+
+            {/* Theme Toggle */}
+            <div className="flex items-center">
+              <ThemeToggle variant="minimal" size="md" />
+            </div>
 
             {/* Primary CTA */}
             <Link
@@ -352,13 +358,19 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:text-brand-primary hover:bg-gray-50 transition-colors duration-200"
-            aria-label="Toggle mobile menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="lg:hidden flex items-center space-x-2">
+            {/* Mobile Theme Toggle */}
+            <ThemeToggle variant="minimal" size="sm" />
+            
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-brand-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+              aria-label="Toggle mobile menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -369,7 +381,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
               animate="open"
               exit="closed"
               variants={mobileMenuVariants}
-              className="lg:hidden border-t border-gray-100 bg-white"
+              className="lg:hidden border-t border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900/95"
             >
               <div className="py-4 space-y-2">
                 {/* Mobile Navigation Items */}

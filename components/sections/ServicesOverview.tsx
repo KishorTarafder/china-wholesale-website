@@ -69,7 +69,7 @@ export const ServicesOverview: React.FC = () => {
   });
 
   return (
-    <section ref={ref} className="section bg-gray-50">
+    <section ref={ref} className="section bg-gray-50 dark:bg-gray-900/50">
       <div className="container">
         {/* Section Header */}
         <motion.div
@@ -78,10 +78,10 @@ export const ServicesOverview: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-secondary mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-secondary dark:text-white mb-6">
             Our <span className="text-gradient">Services</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-100 max-w-3xl mx-auto leading-relaxed">
             From sourcing to delivery, we handle every aspect of your China procurement needs 
             with transparency and reliability.
           </p>
@@ -113,7 +113,7 @@ export const ServicesOverview: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-16"
         >
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 dark:text-gray-100 mb-6">
             Ready to start your sourcing journey?
           </p>
           <button className="btn-primary">

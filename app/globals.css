@@ -24,6 +24,7 @@
   body {
     @apply bg-brand-background text-brand-secondary font-sans antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   /* Heading Styles */
@@ -283,6 +284,27 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
   }
+
+  /* Dark Mode Utilities */
+  .dark-bg {
+    @apply dark:bg-gray-900;
+  }
+  
+  .dark-bg-alt {
+    @apply dark:bg-gray-800;
+  }
+  
+  .dark-text {
+    @apply dark:text-gray-100;
+  }
+  
+  .dark-text-muted {
+    @apply dark:text-gray-300;
+  }
+  
+  .dark-border {
+    @apply dark:border-gray-700;
+  }
   
   /* Background Utilities */
   .bg-gradient-radial {
@@ -325,6 +347,12 @@
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode navbar sticky effect */
+.dark .navbar-sticky {
+  background: rgba(3, 7, 18, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Hero section background gradient */
@@ -407,5 +435,816 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+} 
+
+/* Dark mode enhancements - Using CSS properties instead of @apply to avoid nesting issues */
+
+/* Body dark mode */
+.dark body {
+  background-color: rgb(3 7 18); /* gray-950 */
+  color: rgb(249 250 251); /* gray-50 */
+}
+
+/* Paragraph dark mode */
+.dark p {
+  color: rgb(229 231 235) !important; /* gray-200 */
+}
+
+/* Button dark mode overrides */
+.dark .btn-secondary {
+  background-color: rgba(55, 65, 81, 0.9); /* gray-700/90 */
+  border: 1px solid rgba(75, 85, 99, 0.5); /* gray-600/50 */
+}
+
+.dark .btn-secondary:hover {
+  background-color: rgb(75 85 99); /* gray-600 */
+}
+
+.dark .btn-ghost {
+  color: rgb(209 213 219); /* gray-300 */
+}
+
+.dark .btn-ghost:hover {
+  background-color: rgb(55 65 81); /* gray-700 */
+}
+
+.dark .btn-outline {
+  color: rgb(255 255 255);
+  border-color: #E3431F;
+  background-color: transparent;
+}
+
+.dark .btn-outline:hover {
+  background-color: #E3431F;
+  color: rgb(255 255 255);
+}
+
+/* Input dark mode */
+.dark .input {
+  background-color: rgba(31, 41, 55, 0.9); /* gray-800/90 */
+  border-color: rgba(75, 85, 99, 0.5); /* gray-600/50 */
+  color: rgb(243 244 246); /* gray-100 */
+}
+
+.dark .input::placeholder {
+  color: rgb(209 213 219); /* gray-300 */
+}
+
+/* Label dark mode */
+.dark .label {
+  color: rgb(243 244 246); /* gray-100 */
+}
+
+/* Card dark mode */
+.dark .card {
+  background-color: rgb(31 41 55); /* gray-800 */
+  border-color: rgb(75 85 99); /* gray-600 */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+/* Text gradient that works in dark mode */
+.text-gradient {
+  background: linear-gradient(135deg, #E3431F 0%, #FF6B47 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .text-gradient {
+  background: linear-gradient(135deg, #FF6B47 0%, #FF8A73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+} 
+
+/* Additional dark mode text contrast fixes - Non-nested selectors */
+
+/* Force all remaining gray text to be light in dark mode */
+.dark .text-gray-600,
+.dark .text-gray-700, 
+.dark .text-gray-500, 
+.dark .text-gray-800 {
+  color: #f3f4f6 !important; /* gray-100 */
+}
+
+.dark .text-gray-400 {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+/* Ensure all headings are white in dark mode */
+.dark h1, 
+.dark h2, 
+.dark h3, 
+.dark h4, 
+.dark h5, 
+.dark h6, 
+.dark .heading {
+  color: #ffffff !important;
+}
+
+/* Ensure all paragraphs have good contrast in dark mode */
+.dark p,
+.dark span {
+  color: #f3f4f6 !important;
+}
+
+/* Card text should be white in dark mode */
+.dark .card h1, 
+.dark .card h2, 
+.dark .card h3, 
+.dark .card h4, 
+.dark .card h5, 
+.dark .card h6,
+.dark .card p, 
+.dark .card span {
+  color: #ffffff !important;
+}
+
+/* Service card text in dark mode */
+.dark [class*="service"] h3, 
+.dark [class*="service"] p, 
+.dark [class*="service"] span {
+  color: #ffffff !important;
+}
+
+/* Client card text in dark mode */
+.dark [class*="client"] h3, 
+.dark [class*="client"] p, 
+.dark [class*="client"] span {
+  color: #ffffff !important;
+}
+
+/* Stats text in dark mode */
+.dark [class*="stat"] * {
+  color: #ffffff !important;
+}
+
+/* Process step text in dark mode */
+.dark [class*="process"] * {
+  color: #ffffff !important;
+}
+
+/* Testimonial text in dark mode */
+.dark [class*="testimonial"] * {
+  color: #ffffff !important;
+} 
+
+/* COMPREHENSIVE DARK MODE - MODERN & PROFESSIONAL */
+
+/* Body and base dark mode styling */
+.dark body {
+  background-color: #0f172a; /* slate-900 */
+  color: #f8fafc; /* slate-50 */
+}
+
+/* Typography in dark mode */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dark p {
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+.dark span {
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+/* Section backgrounds */
+.dark section {
+  background-color: #0f172a; /* slate-900 */
+}
+
+.dark .bg-white {
+  background-color: #0f172a !important; /* slate-900 */
+}
+
+.dark .bg-gray-50 {
+  background-color: #1e293b !important; /* slate-800 */
+}
+
+.dark .bg-gray-100 {
+  background-color: #334155 !important; /* slate-700 */
+}
+
+/* Card styling in dark mode */
+.dark .card,
+.dark [class*="card"] {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #475569 !important; /* slate-600 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark .card *,
+.dark [class*="card"] * {
+  color: #ffffff !important;
+}
+
+/* Button styling in dark mode */
+.dark .btn-secondary {
+  background-color: #475569 !important; /* slate-600 */
+  border-color: #64748b !important; /* slate-500 */
+  color: #ffffff !important;
+}
+
+.dark .btn-secondary:hover {
+  background-color: #64748b !important; /* slate-500 */
+}
+
+.dark .btn-ghost {
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+.dark .btn-ghost:hover {
+  background-color: #334155 !important; /* slate-700 */
+  color: #ffffff !important;
+}
+
+.dark .btn-outline {
+  border-color: #e11d48 !important; /* red-600 - brand primary */
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+.dark .btn-outline:hover {
+  background-color: #e11d48 !important;
+  color: #ffffff !important;
+}
+
+/* Form elements in dark mode */
+.dark .input,
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #475569 !important; /* slate-600 */
+  color: #ffffff !important;
+}
+
+.dark .input::placeholder,
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8 !important; /* slate-400 */
+}
+
+.dark .label {
+  color: #f1f5f9 !important; /* slate-100 */
+}
+
+/* Navigation in dark mode */
+.dark nav,
+.dark .navbar,
+.dark header {
+  background-color: #0f172a !important; /* slate-900 */
+  border-color: #334155 !important; /* slate-700 */
+}
+
+.dark .nav-link,
+.dark nav a,
+.dark nav button {
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+.dark .nav-link:hover,
+.dark nav a:hover,
+.dark nav button:hover {
+  color: #ffffff !important;
+}
+
+/* Mobile menu in dark mode */
+.dark .mobile-menu {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #475569 !important; /* slate-600 */
+}
+
+/* Footer in dark mode */
+.dark footer {
+  background-color: #020617 !important; /* slate-950 */
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+.dark footer a {
+  color: #cbd5e1 !important; /* slate-300 */
+}
+
+.dark footer a:hover {
+  color: #ffffff !important;
+}
+
+/* Text color overrides for specific gray classes */
+.dark .text-gray-600 {
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+.dark .text-gray-700 {
+  color: #f1f5f9 !important; /* slate-100 */
+}
+
+.dark .text-gray-500 {
+  color: #cbd5e1 !important; /* slate-300 */
+}
+
+.dark .text-gray-400 {
+  color: #94a3b8 !important; /* slate-400 */
+}
+
+/* Service cards specific styling */
+.dark [class*="service"] {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #475569 !important; /* slate-600 */
+}
+
+.dark [class*="service"] h3,
+.dark [class*="service"] p,
+.dark [class*="service"] span {
+  color: #ffffff !important;
+}
+
+/* Client logo cards */
+.dark [class*="client"] {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #475569 !important; /* slate-600 */
+}
+
+.dark [class*="client"]:hover {
+  background-color: #334155 !important; /* slate-700 */
+}
+
+.dark [class*="client"] h3,
+.dark [class*="client"] p,
+.dark [class*="client"] span {
+  color: #ffffff !important;
+}
+
+/* Stats cards */
+.dark [class*="stat"] {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #475569 !important; /* slate-600 */
+}
+
+.dark [class*="stat"] * {
+  color: #ffffff !important;
+}
+
+/* Process step cards */
+.dark [class*="process"] {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #475569 !important; /* slate-600 */
+}
+
+.dark [class*="process"] * {
+  color: #ffffff !important;
+}
+
+/* Testimonial cards */
+.dark [class*="testimonial"] {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #475569 !important; /* slate-600 */
+}
+
+.dark [class*="testimonial"] * {
+  color: #ffffff !important;
+}
+
+/* Trust indicators and badges */
+.dark .bg-green-50 {
+  background-color: rgba(16, 185, 129, 0.2) !important; /* emerald with opacity */
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+.dark .text-green-700 {
+  color: #a7f3d0 !important; /* emerald-200 */
+}
+
+/* Dropdown menus */
+.dark [class*="dropdown"],
+.dark .absolute {
+  background-color: #1e293b !important; /* slate-800 */
+  border-color: #475569 !important; /* slate-600 */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Hero section gradient */
+.dark .hero-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+/* Text gradient in dark mode */
+.dark .text-gradient {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%) !important; /* orange gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scrollbar styling for dark mode */
+.dark::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark::-webkit-scrollbar-track {
+  background: #1e293b; /* slate-800 */
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background: #475569; /* slate-600 */
+  border-radius: 4px;
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+  background: #64748b; /* slate-500 */
+}
+
+/* Selection styling in dark mode */
+.dark ::selection {
+  background-color: #e11d48; /* red-600 */
+  color: #ffffff;
+}
+
+/* Focus styles in dark mode */
+.dark *:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #e11d48; /* red-600 */
+}
+
+/* Ensure icons are visible in dark mode */
+.dark svg {
+  color: inherit !important;
+}
+
+/* Make sure all text in containers is properly colored */
+.dark .container *,
+.dark .max-w-7xl *,
+.dark .max-w-4xl *,
+.dark .max-w-3xl * {
+  color: inherit;
+}
+
+/* Hero section specific fixes */
+.dark .hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Make sure feature lists are visible */
+.dark .feature-list li {
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+/* Ensure proper contrast for all interactive elements */
+.dark button,
+.dark a {
+  color: inherit;
+}
+
+.dark button:hover,
+.dark a:hover {
+  color: #ffffff !important;
+} 
+
+/* ADDITIONAL DARK MODE FIXES - MAXIMUM CONTRAST */
+
+/* Force all text to be bright in dark mode - AGGRESSIVE APPROACH */
+.dark * {
+  color: #ffffff !important;
+}
+
+/* Override specific text colors that should be bright */
+.dark .text-gray-600,
+.dark .text-gray-700,
+.dark .text-gray-500,
+.dark .text-gray-800,
+.dark .text-gray-400 {
+  color: #f1f5f9 !important; /* Very bright gray */
+}
+
+/* Ensure all headings are pure white */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure all paragraphs are bright */
+.dark p {
+  color: #f1f5f9 !important; /* slate-100 */
+}
+
+/* Ensure all spans are bright */
+.dark span {
+  color: #f1f5f9 !important; /* slate-100 */
+}
+
+/* Ensure all divs have proper text color */
+.dark div {
+  color: #f1f5f9 !important;
+}
+
+/* Fix specific components that might be hard to read */
+.dark .hero-section *,
+.dark [class*="hero"] * {
+  color: #ffffff !important;
+}
+
+.dark .stats-section *,
+.dark [class*="stats"] *,
+.dark [class*="track"] * {
+  color: #ffffff !important;
+}
+
+/* Fix any remaining low contrast text */
+.dark .container *,
+.dark .section * {
+  color: #f8fafc !important; /* slate-50 - very bright */
+}
+
+/* Ensure brand text is visible */
+.dark .text-brand-secondary {
+  color: #ffffff !important;
+}
+
+/* Fix muted text to still be readable */
+.dark .text-muted,
+.dark [class*="muted"] {
+  color: #cbd5e1 !important; /* slate-300 */
+}
+
+/* Fix any opacity issues */
+.dark * {
+  opacity: 1 !important;
+}
+
+/* Override any low opacity text */
+.dark .opacity-50,
+.dark .opacity-60,
+.dark .opacity-70 {
+  opacity: 1 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Fix specific gradient text that might be hard to read */
+.dark .bg-gradient-to-br {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+/* Ensure all buttons have proper text color */
+.dark button {
+  color: #ffffff !important;
+}
+
+.dark button * {
+  color: inherit !important;
+}
+
+/* Fix any remaining problematic selectors */
+.dark .max-w-2xl *,
+.dark .max-w-3xl *,
+.dark .max-w-4xl *,
+.dark .max-w-5xl *,
+.dark .max-w-6xl *,
+.dark .max-w-7xl * {
+  color: #f8fafc !important;
+}
+
+/* Fix text in grid layouts */
+.dark .grid *,
+.dark .flex * {
+  color: #f8fafc !important;
+}
+
+/* Hero section specific fixes */
+.dark .hero-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+.dark .hero-gradient * {
+  color: #ffffff !important;
+}
+
+/* Track record section fix */
+.dark [class*="track"] h2,
+.dark [class*="track"] h3,
+.dark [class*="track"] p {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Stats and numbers should be bright white */
+.dark .text-4xl,
+.dark .text-5xl,
+.dark .text-6xl,
+.dark .text-7xl {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* Subheadings should be bright */
+.dark .text-lg,
+.dark .text-xl,
+.dark .text-2xl {
+  color: #f1f5f9 !important;
+}
+
+/* Small text should still be readable */
+.dark .text-sm,
+.dark .text-xs {
+  color: #e2e8f0 !important;
+} 
+
+/* Fix specific background boxes and text gradient containers in dark mode */
+
+/* Text gradient background fixes */
+.dark .text-gradient {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  position: relative;
+}
+
+/* Fix any background boxes behind gradient text */
+.dark .text-gradient::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -8px;
+  right: -8px;
+  bottom: -4px;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(251, 146, 60, 0.1) 100%);
+  border-radius: 8px;
+  z-index: -1;
+}
+
+/* Fix service cards and containers in dark mode */
+.dark .bg-brand-primary\/10 {
+  background-color: rgba(239, 68, 68, 0.2) !important; /* red with opacity */
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Fix trust indicator badges */
+.dark .bg-green-50 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Fix any orange/red background containers */
+.dark .bg-orange-50,
+.dark .bg-red-50,
+.dark .bg-yellow-50 {
+  background-color: rgba(249, 115, 22, 0.15) !important;
+  border: 1px solid rgba(249, 115, 22, 0.25) !important;
+}
+
+/* Fix text containers and spans that might have backgrounds */
+.dark span[class*="bg-"],
+.dark div[class*="bg-"] {
+  background-color: rgba(30, 41, 59, 0.8) !important; /* slate-800 with opacity */
+  border-radius: 8px;
+  padding: 4px 8px;
+  border: 1px solid rgba(71, 85, 105, 0.3) !important;
+}
+
+/* Fix hero section background pattern/boxes */
+.dark .hero-pattern,
+.dark [class*="pattern"],
+.dark [class*="background"] {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%) !important;
+  border: 1px solid rgba(71, 85, 105, 0.2) !important;
+}
+
+/* Fix service section background containers */
+.dark .service-container,
+.dark .services-grid > *,
+.dark [class*="service-"] {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  border: 1px solid rgba(71, 85, 105, 0.4) !important;
+  border-radius: 12px;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Fix any floating elements or badges */
+.dark .badge,
+.dark .chip,
+.dark [class*="badge"],
+.dark [class*="chip"] {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  border: 1px solid rgba(71, 85, 105, 0.5) !important;
+  color: #ffffff !important;
+}
+
+/* Fix section headers with background elements */
+.dark .section-header,
+.dark .header-container {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Fix any problematic background overlays */
+.dark .overlay,
+.dark [class*="overlay"] {
+  background: rgba(15, 23, 42, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Ensure text shadows work well with backgrounds */
+.dark h1, .dark h2 {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Fix any remaining background containers */
+.dark .container > div,
+.dark .section > div {
+  background: transparent !important;
+} 
+
+/* Enhanced text gradient styling for better dark mode appearance */
+.dark .text-gradient {
+  background: linear-gradient(135deg, #ff6b35 0%, #f9844a 25%, #ff8f65 50%, #ffab80 75%, #ffc299 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  position: relative;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.1 !important;
+  filter: drop-shadow(0 1px 2px rgba(255, 107, 53, 0.4)) 
+          drop-shadow(0 2px 4px rgba(255, 107, 53, 0.3)) 
+          drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2)) !important;
+}
+
+/* Organic multi-layer glow effect - Outer glow */
+.dark .text-gradient::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -25px;
+  right: -25px;
+  bottom: -20px;
+  background: radial-gradient(ellipse at center, 
+              rgba(255, 107, 53, 0.15) 0%, 
+              rgba(255, 107, 53, 0.08) 30%, 
+              rgba(255, 107, 53, 0.04) 60%, 
+              transparent 100%);
+  border-radius: 50% / 40%;
+  z-index: -3;
+  filter: blur(15px);
+  opacity: 0.8;
+}
+
+/* Medium glow layer */
+.dark .text-gradient::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -18px;
+  right: -18px;
+  bottom: -12px;
+  background: radial-gradient(ellipse at center, 
+              rgba(255, 139, 101, 0.25) 0%, 
+              rgba(255, 139, 101, 0.15) 40%, 
+              rgba(255, 139, 101, 0.08) 70%, 
+              transparent 100%);
+  border-radius: 60% / 45%;
+  z-index: -2;
+  filter: blur(8px);
+  opacity: 0.9;
+}
+
+/* Inner subtle glow using box-shadow for better control */
+.dark .text-gradient {
+  text-shadow: 
+    0 0 10px rgba(255, 107, 53, 0.3),
+    0 0 20px rgba(255, 107, 53, 0.2),
+    0 0 30px rgba(255, 107, 53, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Special enhancement for large headings */
+.dark h1 .text-gradient {
+  text-shadow: 
+    0 0 15px rgba(255, 107, 53, 0.4),
+    0 0 30px rgba(255, 107, 53, 0.25),
+    0 0 45px rgba(255, 107, 53, 0.15),
+    0 0 60px rgba(255, 107, 53, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Breathing animation for enhanced effect */
+.dark .text-gradient {
+  animation: gentle-glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes gentle-glow {
+  0% { 
+    filter: drop-shadow(0 1px 2px rgba(255, 107, 53, 0.4)) 
+            drop-shadow(0 2px 4px rgba(255, 107, 53, 0.3)) 
+            drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  }
+  100% { 
+    filter: drop-shadow(0 1px 3px rgba(255, 107, 53, 0.5)) 
+            drop-shadow(0 3px 6px rgba(255, 107, 53, 0.4)) 
+            drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
   }
 } 

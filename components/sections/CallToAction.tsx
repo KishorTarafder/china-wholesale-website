@@ -38,7 +38,7 @@ export const CallToAction: React.FC = () => {
   };
 
   return (
-    <section ref={ref} className="section-lg">
+    <section ref={ref} className="section-lg bg-white dark:bg-gray-950">
       <div className="container">
         <div className="relative">
           {/* Background Pattern */}

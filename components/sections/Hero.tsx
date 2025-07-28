@@ -216,7 +216,7 @@ export const Hero: React.FC = () => {
   return (
     <section 
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800"
     >
       {/* Background Pattern */}
       <BackgroundPattern />
@@ -235,7 +235,7 @@ export const Hero: React.FC = () => {
             <motion.div
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center space-x-2 bg-green-50 dark:bg-green-500/20 text-green-700 dark:text-green-200 px-4 py-2 rounded-full text-sm font-medium mb-6 dark:border dark:border-green-500/30"
             >
               <CheckCircle className="w-4 h-4" />
               <span>Trusted by 200+ Businesses in Bangladesh</span>
@@ -245,7 +245,7 @@ export const Hero: React.FC = () => {
             <motion.h1
               variants={fadeInUp}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-secondary leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-secondary dark:text-white leading-tight mb-6"
             >
               From China to Bangladesh —{' '}
               <span className="text-gradient">
@@ -257,7 +257,7 @@ export const Hero: React.FC = () => {
             <motion.p
               variants={fadeInUp}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-lg md:text-xl text-gray-600 dark:text-gray-100 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               Your trusted sourcing partner for verified products, smooth logistics, 
               and seamless delivery — from the world's largest marketplace to your doorstep.
@@ -277,7 +277,7 @@ export const Hero: React.FC = () => {
               ].map((feature, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">{feature}</span>
+                  <span className="text-gray-700 dark:text-gray-100 font-medium">{feature}</span>
                 </div>
               ))}
             </motion.div>

@@ -236,7 +236,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-brand-secondary text-white">
+    <footer className="bg-brand-secondary dark:bg-gray-950 text-white">
       {/* Main Footer Content */}
       <div className="container py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">

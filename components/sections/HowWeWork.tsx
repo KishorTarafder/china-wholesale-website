@@ -68,7 +68,7 @@ export const HowWeWork: React.FC = () => {
   });
 
   return (
-    <section ref={ref} className="section">
+    <section ref={ref} className="section bg-white dark:bg-gray-950">
       <div className="container">
         {/* Section Header */}
         <motion.div
@@ -77,7 +77,7 @@ export const HowWeWork: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-secondary mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-secondary dark:text-white mb-6">
             How We <span className="text-gradient">Work</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

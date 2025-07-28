@@ -42,7 +42,7 @@ export const ClientLogos: React.FC = () => {
   });
 
   return (
-    <section ref={ref} className="section bg-gray-50">
+    <section ref={ref} className="section bg-gray-50 dark:bg-gray-900/50">
       <div className="container">
         {/* Section Header */}
         <motion.div
@@ -51,10 +51,10 @@ export const ClientLogos: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-secondary mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-secondary dark:text-white mb-6">
             Trusted by <span className="text-gradient">200+ Businesses</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-100 max-w-3xl mx-auto leading-relaxed">
             From startups to established enterprises, businesses across Bangladesh rely on us for their sourcing needs.
           </p>
         </motion.div>
@@ -75,13 +75,14 @@ export const ClientLogos: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="bg-white rounded-xl p-6 shadow-soft border border-gray-100 hover:shadow-medium transition-all duration-300 text-center group-hover:-translate-y-2">
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-soft border border-gray-100 dark:border-gray-600 hover:shadow-medium transition-all duration-300 text-center group-hover:-translate-y-2">
                   {/* Logo Placeholder */}
                   <div className="w-16 h-16 bg-brand-primary/10 text-brand-primary rounded-lg flex items-center justify-center text-xl font-bold mb-4 mx-auto group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
-                    {client.logo}
+                    {client.name.substring(0, 2).toUpperCase()}
                   </div>
-                  {/* Client Name */}
-                  <h3 className="text-sm font-semibold text-gray-700 group-hover:text-brand-primary transition-colors duration-300">
+                  
+                  {/* Company Name */}
+                  <h3 className="font-medium text-brand-secondary dark:text-white text-sm">
                     {client.name}
                   </h3>
                 </div>

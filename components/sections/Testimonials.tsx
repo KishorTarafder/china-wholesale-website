@@ -62,7 +62,7 @@ export const Testimonials: React.FC = () => {
   });
 
   return (
-    <section ref={ref} className="section bg-gray-50">
+    <section ref={ref} className="section bg-gray-50 dark:bg-gray-900/50">
       <div className="container">
         {/* Section Header */}
         <motion.div
@@ -71,7 +71,7 @@ export const Testimonials: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-secondary mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

@@ -141,7 +141,7 @@ export const Stats: React.FC = () => {
   });
 
   return (
-    <section ref={ref} className="section">
+    <section ref={ref} className="section bg-gray-50 dark:bg-gray-900/50">
       <div className="container">
         {/* Section Header */}
         <motion.div
@@ -150,7 +150,7 @@ export const Stats: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-secondary mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-secondary dark:text-white mb-6">
             Our <span className="text-gradient">Track Record</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

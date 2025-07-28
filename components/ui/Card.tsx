@@ -39,11 +39,11 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
  */
 const getVariantStyles = (variant: CardVariant): string => {
   const variants = {
-    default: 'bg-white border border-gray-200 shadow-soft',
-    elevated: 'bg-white shadow-medium border border-gray-100',
-    bordered: 'bg-white border-2 border-gray-200',
-    glass: 'bg-white/70 backdrop-blur-md border border-white/20 shadow-soft',
-    outline: 'bg-transparent border-2 border-brand-primary',
+    default: 'bg-white dark:bg-gray-800/90 border border-gray-200 dark:border-gray-600/50 shadow-soft dark:shadow-gray-900/20',
+    elevated: 'bg-white dark:bg-gray-800/95 shadow-medium dark:shadow-gray-900/30 border border-gray-100 dark:border-gray-600/40',
+    bordered: 'bg-white dark:bg-gray-800/90 border-2 border-gray-200 dark:border-gray-600',
+    glass: 'bg-white/70 dark:bg-gray-800/80 backdrop-blur-md border border-white/20 dark:border-gray-600/30 shadow-soft',
+    outline: 'bg-transparent border-2 border-brand-primary dark:border-brand-primary',
   };
   
   return variants[variant];
@@ -350,7 +350,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
         )}
 
         {/* Content */}
-        <p className="text-gray-700 italic mb-6 leading-relaxed">
+        <p className="text-gray-700 dark:text-gray-100 italic mb-6 leading-relaxed">
           {content}
         </p>
 
@@ -370,11 +370,11 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
             </div>
           )}
           <div>
-            <p className="font-medium text-brand-secondary text-sm">
+            <p className="font-medium text-brand-secondary dark:text-white text-sm">
               {author.name}
             </p>
             {(author.role || author.company) && (
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-500 dark:text-gray-300">
                 {author.role}
                 {author.role && author.company && ', '}
                 {author.company}
@@ -423,18 +423,18 @@ export const StatCard: React.FC<StatCardProps> = ({
         )}
 
         {/* Value */}
-        <div className="text-3xl lg:text-4xl font-bold text-brand-secondary mb-2">
+        <div className="text-3xl lg:text-4xl font-bold text-brand-secondary dark:text-white mb-2">
           {value}
         </div>
 
         {/* Label */}
-        <h3 className="text-sm font-medium text-gray-600 uppercase tracking-wider mb-2">
+        <h3 className="text-sm font-medium text-gray-600 dark:text-gray-200 uppercase tracking-wider mb-2">
           {label}
         </h3>
 
         {/* Description */}
         {description && (
-          <p className="text-xs text-gray-500 mb-3">
+          <p className="text-xs text-gray-500 dark:text-gray-300 mb-3">
             {description}
           </p>
         )}
