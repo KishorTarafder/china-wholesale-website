@@ -91,7 +91,7 @@ export const useIntersectionObserver = ({
     return () => {
       observer.disconnect();
     };
-  }, [threshold, rootMargin, triggerOnce, hasBeenInView]);
+  }, [threshold, rootMargin, triggerOnce]); // Removed hasBeenInView to prevent infinite loops
 
   return {
     ref,
@@ -181,7 +181,7 @@ export const useStaggeredAnimation = (
     return () => {
       observers.forEach(observer => observer.disconnect());
     };
-  }, [count, delay, hasTriggered, options.threshold, options.rootMargin]);
+  }, [count, delay, options.threshold, options.rootMargin]); // Removed hasTriggered to prevent infinite loops
 
   return Array(count).fill(null).map((_, index) => ({
     ref: (element: HTMLElement | null) => {
@@ -218,7 +218,10 @@ export const useCounterAnimation = (
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    if (!isInView || isAnimating) return;
+    if (!isInView) return;
+    
+    // Prevent multiple animations
+    if (isAnimating || count > 0) return;
 
     setIsAnimating(true);
     const startTime = Date.now();
@@ -243,7 +246,7 @@ export const useCounterAnimation = (
     };
 
     requestAnimationFrame(animate);
-  }, [isInView, end, duration, isAnimating]);
+  }, [isInView, end, duration]); // Removed isAnimating to prevent infinite loops
 
   return {
     ref,

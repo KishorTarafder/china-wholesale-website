@@ -76,16 +76,24 @@ const ServicesPage: React.FC = () => {
       <Layout10 />
       
       {/* Product Sourcing Services */}
-      <Layout24 />
+      <section id="sourcing">
+        <Layout24 />
+      </section>
       
       {/* Quality Control & Inspection */}
-      <Layout6 />
+      <section id="quality">
+        <Layout6 />
+      </section>
       
       {/* Shipping & Logistics Solutions */}
-      <Layout192 />
+      <section id="shipping">
+        <Layout192 />
+      </section>
       
       {/* Custom Orders & Specialized Services */}
-      <Layout3 />
+      <section id="custom">
+        <Layout3 />
+      </section>
       
       {/* Service Inquiry CTA */}
       <Cta7 />

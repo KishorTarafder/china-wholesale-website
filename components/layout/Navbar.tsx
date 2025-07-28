@@ -33,7 +33,14 @@ const navigationItems = [
   {
     label: 'Home',
     href: '/',
-    isActive: true,
+    submenu: [
+      { label: 'About China Wholesale', href: '/#about' },
+      { label: 'Our Services', href: '/#services' },
+      { label: 'How We Work', href: '/#how-we-work' },
+      { label: 'Why Choose Us', href: '/#why-us' },
+      { label: 'Client Testimonials', href: '/#testimonials' },
+      { label: 'Get Quote', href: '/#contact' },
+    ],
   },
   {
     label: 'About Us',
@@ -47,15 +54,28 @@ const navigationItems = [
       { label: 'Quality Control', href: '/services#quality' },
       { label: 'Shipping Solutions', href: '/services#shipping' },
       { label: 'Custom Orders', href: '/services#custom' },
+      { label: 'All Services', href: '/services' },
     ],
   },
   {
     label: 'How We Work',
     href: '/how-we-work',
+    submenu: [
+      { label: 'Our Process', href: '/how-we-work#process' },
+      { label: 'Quality Assurance', href: '/how-we-work#quality' },
+      { label: 'Timeline & Delivery', href: '/how-we-work#timeline' },
+      { label: 'Success Stories', href: '/how-we-work#testimonials' },
+    ],
   },
   {
     label: 'Contact',
     href: '/contact',
+    submenu: [
+      { label: 'Get Quote', href: '/contact#quote' },
+      { label: 'Service Inquiry', href: '/service-query-form' },
+      { label: 'WhatsApp Chat', href: '#whatsapp' },
+      { label: 'Office Visit', href: '/contact#office' },
+    ],
   },
 ];
 
@@ -102,6 +122,13 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
    * Handle smooth scroll to section
    */
   const handleSmoothScroll = (href: string) => {
+    // Handle WhatsApp special case
+    if (href === '#whatsapp') {
+      handleWhatsAppContact();
+      setIsOpen(false);
+      return;
+    }
+
     if (href.includes('#')) {
       const [path, hash] = href.split('#');
       
@@ -148,8 +175,8 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
    * Handle WhatsApp contact
    */
   const handleWhatsAppContact = () => {
-    const phoneNumber = '+8801XXXXXXXXX'; // Replace with actual number
-    const message = encodeURIComponent('Hi! I would like to know more about your sourcing services.');
+    const phoneNumber = '8801700000000'; // Replace with actual number
+    const message = encodeURIComponent('Hi! I would like to know more about your sourcing services from China Wholesale.');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 

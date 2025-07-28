@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
       <Contact13 />
       
       {/* Main Contact Form */}
-      <section className="section bg-white">
+      <section id="quote" className="section bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-secondary mb-6">
@@ -90,8 +90,10 @@ const ContactPage: React.FC = () => {
       {/* Frequently Asked Questions */}
       <Faq1 />
       
-      {/* Additional Contact Support */}
-      <Contact16 />
+      {/* Office Location & Additional Support */}
+      <section id="office">
+        <Contact16 />
+      </section>
       
       {/* Footer */}
       <Footer />

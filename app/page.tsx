@@ -70,28 +70,42 @@ const HomePage: React.FC = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <Hero />
+      <section id="hero">
+        <Hero />
+      </section>
 
       {/* Services Overview */}
-      <ServicesOverview />
+      <section id="services">
+        <ServicesOverview />
+      </section>
 
       {/* Client Logos / Trust Indicators */}
       <ClientLogos />
 
       {/* How We Work Process */}
-      <HowWeWork />
+      <section id="how-we-work">
+        <HowWeWork />
+      </section>
 
       {/* Why Choose Us */}
-      <WhyChooseUs />
+      <section id="why-us">
+        <WhyChooseUs />
+      </section>
 
-      {/* Statistics Section */}
-      <Stats />
+      {/* About Section (Statistics) */}
+      <section id="about">
+        <Stats />
+      </section>
 
       {/* Client Testimonials */}
-      <Testimonials />
+      <section id="testimonials">
+        <Testimonials />
+      </section>
 
       {/* Call to Action */}
-      <CallToAction />
+      <section id="contact">
+        <CallToAction />
+      </section>
 
       {/* Footer */}
       <Footer />
