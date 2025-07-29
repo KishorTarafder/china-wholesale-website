@@ -42,13 +42,13 @@ export const CallToAction: React.FC = () => {
       <div className="container">
         <div className="relative">
           {/* Background Pattern */}
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-red-600 rounded-3xl overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-red-600 dark:from-slate-800 dark:to-slate-900 rounded-3xl overflow-hidden">
             {/* Animated background elements */}
-            <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 opacity-20 dark:opacity-10">
               {[...Array(6)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-32 h-32 bg-white rounded-full"
+                  className="absolute w-32 h-32 bg-white dark:bg-blue-400 rounded-full"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
@@ -65,6 +65,9 @@ export const CallToAction: React.FC = () => {
                 />
               ))}
             </div>
+            
+            {/* Dark mode electric blue gradient overlay */}
+            <div className="hidden dark:block absolute inset-0 bg-gradient-to-br from-blue-600/20 via-blue-500/10 to-cyan-500/20 rounded-3xl"></div>
           </div>
 
           {/* Content */}
@@ -122,7 +125,7 @@ export const CallToAction: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
               >
                 <Link href="/service-query-form">
-                  <button className="bg-white text-brand-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-200 flex items-center justify-center space-x-2 group">
+                  <button className="bg-white text-brand-primary dark:bg-blue-600 dark:text-white dark:hover:bg-blue-500 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-200 flex items-center justify-center space-x-2 group">
                     <span>Get Free Quote</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
@@ -130,7 +133,7 @@ export const CallToAction: React.FC = () => {
 
                 <button
                   onClick={handleWhatsAppContact}
-                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-brand-primary transition-all duration-200 flex items-center justify-center space-x-2"
+                  className="border-2 border-white text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-brand-primary transition-all duration-200 flex items-center justify-center space-x-2"
                 >
                   <MessageCircle className="w-5 h-5" />
                   <span>WhatsApp Chat</span>

@@ -24,13 +24,16 @@ export const Cta7: React.FC = () => {
   };
 
   return (
-    <section ref={ref} className="section bg-brand-primary">
+    <section ref={ref} className="section bg-brand-primary dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900">
       <div className="container">
+        {/* Dark mode electric blue accent overlay */}
+        <div className="hidden dark:block absolute inset-0 bg-gradient-to-br from-blue-600/10 via-blue-500/5 to-cyan-500/10 rounded-xl"></div>
+        
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center text-white"
+          className="text-center text-white relative z-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Sourcing Journey?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
@@ -43,7 +46,7 @@ export const Cta7: React.FC = () => {
               variant="secondary"
               icon={<ArrowRight size={20} />}
               iconPosition="right"
-              className="bg-white text-brand-primary hover:bg-gray-100"
+              className="bg-white text-brand-primary hover:bg-gray-100 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-500"
             >
               Get Free Quote
             </Button>
@@ -52,7 +55,7 @@ export const Cta7: React.FC = () => {
               variant="outline"
               icon={<MessageCircle size={20} />}
               onClick={handleWhatsAppContact}
-              className="border-white text-white hover:bg-white hover:text-brand-primary"
+              className="border-white text-white hover:bg-white hover:text-brand-primary dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white"
             >
               WhatsApp Now
             </Button>

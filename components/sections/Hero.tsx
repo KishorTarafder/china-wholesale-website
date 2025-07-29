@@ -165,7 +165,7 @@ const BackgroundPattern: React.FC = () => (
     />
     
     <motion.div
-      className="absolute bottom-32 left-16 w-16 h-16 bg-green-400/10 rounded-full"
+      className="absolute bottom-32 left-16 w-16 h-16 bg-green-400/10 rounded-full animate-float"
       animate={{
         y: [10, -10, 10],
         x: [-5, 5, -5],
@@ -216,7 +216,7 @@ export const Hero: React.FC = () => {
   return (
     <section 
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gradient-to-br dark:from-slate-950 dark:via-gray-900 dark:to-slate-900"
     >
       {/* Background Pattern */}
       <BackgroundPattern />
@@ -235,7 +235,7 @@ export const Hero: React.FC = () => {
             <motion.div
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 bg-green-50 dark:bg-green-500/20 text-green-700 dark:text-green-200 px-4 py-2 rounded-full text-sm font-medium mb-6 dark:border dark:border-green-500/30"
+              className="inline-flex items-center space-x-2 bg-green-50 dark:bg-white/10 dark:backdrop-blur-md text-green-700 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6 dark:border dark:border-white/10 shadow-xl transition-all duration-200"
             >
               <CheckCircle className="w-4 h-4" />
               <span>Trusted by 200+ Businesses in Bangladesh</span>
@@ -245,7 +245,7 @@ export const Hero: React.FC = () => {
             <motion.h1
               variants={fadeInUp}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-secondary dark:text-white leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-secondary dark:text-gray-100 leading-tight mb-6 transition-all duration-200"
             >
               From China to Bangladesh —{' '}
               <span className="text-gradient">
@@ -257,13 +257,13 @@ export const Hero: React.FC = () => {
             <motion.p
               variants={fadeInUp}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-600 dark:text-gray-100 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-xl md:text-2xl text-gray-600 dark:text-white mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed transition-all duration-200"
             >
               Your trusted sourcing partner for verified products, smooth logistics, 
               and seamless delivery — from the world's largest marketplace to your doorstep.
             </motion.p>
 
-            {/* Key Features List */}
+            {/* Feature Checklist */}
             <motion.div
               variants={fadeInUp}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -275,8 +275,9 @@ export const Hero: React.FC = () => {
                 'Fast Delivery',
                 'Local Support',
               ].map((feature, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+              
+                <div key={index} className="flex items-center space-x-2 dark:bg-white/10 dark:backdrop-blur-md dark:border dark:border-white/10 dark:px-3 dark:py-2 dark:rounded-lg shadow-xl transition-all duration-200">
+                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-blue-400 flex-shrink-0" />
                   <span className="text-gray-700 dark:text-gray-100 font-medium">{feature}</span>
                 </div>
               ))}
@@ -294,7 +295,7 @@ export const Hero: React.FC = () => {
                   gradient
                   icon={<ArrowRight className="w-5 h-5" />}
                   iconPosition="right"
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto shadow-xl transition-all duration-200"
                 >
                   Get Free Quote
                 </CTAButton>
@@ -305,7 +306,7 @@ export const Hero: React.FC = () => {
                 size="lg"
                 onClick={handleWhatsAppContact}
                 icon={<MessageCircle className="w-5 h-5" />}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto shadow-xl transition-all duration-200 dark:border-white/10 dark:text-gray-100 dark:hover:bg-white/10 dark:hover:backdrop-blur-md"
               >
                 WhatsApp Chat
               </Button>
@@ -315,14 +316,14 @@ export const Hero: React.FC = () => {
             <motion.div
               variants={fadeInUp}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-600"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-600 dark:text-gray-400 transition-all duration-200"
             >
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 dark:text-blue-400" />
                 <span>+880 1XXX-XXXXXX</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Clock className="w-4 h-4" />
+                <Clock className="w-4 h-4 dark:text-blue-400" />
                 <span>7-15 Days Delivery</span>
               </div>
             </motion.div>
@@ -339,13 +340,13 @@ export const Hero: React.FC = () => {
             <motion.div
               variants={fadeInUp}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative bg-gradient-to-br from-brand-primary to-red-600 rounded-3xl p-8 mb-8 overflow-hidden"
+              className="relative bg-gradient-to-br from-brand-primary to-red-600 dark:bg-white/10 dark:backdrop-blur-md dark:border dark:border-white/10 rounded-3xl p-8 mb-8 overflow-hidden shadow-xl transition-all duration-200"
             >
               {/* Replace with actual hero image */}
-              <div className="text-center text-white">
-                <Globe className="w-20 h-20 mx-auto mb-4 animate-pulse-slow" />
-                <h3 className="text-2xl font-bold mb-2">Global Sourcing</h3>
-                <p className="text-brand-primary-50">
+              <div className="text-center text-white dark:text-gray-100">
+                <Globe className="w-20 h-20 mx-auto mb-4 animate-pulse-slow dark:text-blue-400" />
+                <h3 className="text-2xl font-bold mb-2 dark:text-gray-100">Global Sourcing</h3>
+                <p className="text-brand-primary-50 dark:text-gray-400">
                   Connecting Bangladesh with China's vast marketplace
                 </p>
               </div>
@@ -364,18 +365,18 @@ export const Hero: React.FC = () => {
               {statistics.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-4 shadow-soft border border-gray-100 text-center group hover:shadow-medium transition-all duration-300"
+                  className="bg-white dark:bg-white/10 dark:backdrop-blur-md dark:border-white/10 rounded-xl p-4 shadow-soft border border-gray-100 text-center group hover:shadow-medium transition-all duration-300 shadow-xl"
                 >
-                  <div className="text-2xl lg:text-3xl font-bold text-brand-secondary mb-1">
+                  <div className="text-2xl lg:text-3xl font-bold text-brand-secondary dark:text-gray-100 mb-1">
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div className="text-sm font-medium text-gray-600 mb-1">
+                  <div className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
                     {stat.label}
                   </div>
-                  <div className="text-xs text-gray-500">
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
                     {stat.description}
                   </div>
-                  <stat.icon className="w-6 h-6 text-brand-primary mx-auto mt-2 group-hover:scale-110 transition-transform duration-300" />
+                  <stat.icon className="w-6 h-6 text-brand-primary dark:text-blue-400 mx-auto mt-2 group-hover:scale-110 transition-transform duration-300" />
                 </div>
               ))}
             </motion.div>
@@ -388,7 +389,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-16 lg:mt-20"
         >
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-soft border border-gray-100">
+          <div className="bg-white/80 dark:bg-white/10 dark:backdrop-blur-md dark:border dark:border-white/10 backdrop-blur-sm rounded-2xl p-6 shadow-soft border border-gray-100 shadow-xl transition-all duration-200">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {trustIndicators.map((indicator, index) => (
                 <motion.div
@@ -398,13 +399,13 @@ export const Hero: React.FC = () => {
                   transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                   className="text-center group"
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-primary/10 text-brand-primary rounded-xl mb-3 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-primary/10 dark:bg-blue-500/20 text-brand-primary dark:text-blue-400 rounded-xl mb-3 group-hover:bg-brand-primary dark:group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
                     <indicator.icon className="w-6 h-6" />
                   </div>
-                  <h4 className="font-semibold text-brand-secondary text-sm mb-1">
+                  <h4 className="font-semibold text-brand-secondary dark:text-gray-100 text-sm mb-1">
                     {indicator.text}
                   </h4>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
                     {indicator.description}
                   </p>
                 </motion.div>

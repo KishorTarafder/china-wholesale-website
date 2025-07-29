@@ -105,6 +105,20 @@
     @apply btn bg-brand-primary text-white hover:bg-opacity-90 focus:ring-brand-primary shadow-brand;
   }
   
+  /* Dark mode primary button - Electric Blue */
+  .dark .btn-primary {
+    background: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+    color: #ffffff !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  .dark .btn-primary:hover {
+    background: #2563eb !important;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3) !important;
+    transform: translateY(-1px) !important;
+  }
+  
   .btn-secondary {
     @apply btn bg-brand-secondary text-white hover:bg-gray-800 focus:ring-brand-secondary;
   }
@@ -349,10 +363,11 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Dark mode navbar sticky effect */
+/* Dark mode navbar sticky effect - Modern Charcoal Theme */
 .dark .navbar-sticky {
-  background: rgba(3, 7, 18, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(24, 26, 32, 0.95); /* Subtle transparency for depth */
+  border-bottom: 1px solid #23242b; /* Super subtle divider */
+  backdrop-filter: blur(20px);
 }
 
 /* Hero section background gradient */
@@ -440,68 +455,96 @@
 
 /* Dark mode enhancements - Using CSS properties instead of @apply to avoid nesting issues */
 
-/* Body dark mode */
+/* Body dark mode - Modern Charcoal Theme */
 .dark body {
-  background-color: rgb(3 7 18); /* gray-950 */
-  color: rgb(249 250 251); /* gray-50 */
+  background: #18181c; /* Deep charcoal */
+  color: #e0e0e6; /* Soft warm white */
+  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
 }
 
-/* Paragraph dark mode */
+/* Text styling - Modern Charcoal Theme */
 .dark p {
-  color: rgb(229 231 235) !important; /* gray-200 */
+  color: #e0e0e6 !important; /* Soft warm white */
+  line-height: 1.1;
 }
 
-/* Button dark mode overrides */
+.dark .text-secondary,
+.dark .text-muted {
+  color: #b0b3b8 !important; /* Dimmed gray for secondary text */
+}
+
+/* Button styling - Modern Electric Blue Theme */
 .dark .btn-secondary {
-  background-color: rgba(55, 65, 81, 0.9); /* gray-700/90 */
-  border: 1px solid rgba(75, 85, 99, 0.5); /* gray-600/50 */
+  background: #22232b; /* Card background */
+  border: 1px solid #282a36; /* Subtle border */
+  color: #e0e0e6;
+  transition: all 0.2s ease;
 }
 
 .dark .btn-secondary:hover {
-  background-color: rgb(75 85 99); /* gray-600 */
+  background: #2a2b35;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .dark .btn-ghost {
-  color: rgb(209 213 219); /* gray-300 */
+  color: #b0b3b8; /* Secondary text color */
+  background: transparent;
+  transition: all 0.2s ease;
 }
 
 .dark .btn-ghost:hover {
-  background-color: rgb(55 65 81); /* gray-700 */
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
 }
 
 .dark .btn-outline {
-  color: rgb(255 255 255);
-  border-color: #E3431F;
+  color: #3b82f6; /* Electric blue */
+  border-color: #3b82f6;
   background-color: transparent;
+  transition: all 0.2s ease;
 }
 
 .dark .btn-outline:hover {
-  background-color: #E3431F;
-  color: rgb(255 255 255);
+  background: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
-/* Input dark mode */
+/* Input styling - Modern Charcoal Theme */
 .dark .input {
-  background-color: rgba(31, 41, 55, 0.9); /* gray-800/90 */
-  border-color: rgba(75, 85, 99, 0.5); /* gray-600/50 */
-  color: rgb(243 244 246); /* gray-100 */
+  background: #22232b; /* Card background */
+  border: 1px solid #282a36; /* Subtle border */
+  color: #e0e0e6; /* Primary text */
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+
+.dark .input:focus {
+  border-color: #3b82f6; /* Electric blue focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: #22232b;
 }
 
 .dark .input::placeholder {
-  color: rgb(209 213 219); /* gray-300 */
+  color: #b0b3b8; /* Secondary text */
 }
 
-/* Label dark mode */
+/* Label styling - Modern Theme */
 .dark .label {
-  color: rgb(243 244 246); /* gray-100 */
+  color: #e0e0e6; /* Primary text */
+  font-weight: 500;
 }
 
-/* Card dark mode */
+/* Card styling - Modern Charcoal Theme */
 .dark .card {
-  background-color: rgb(31 41 55); /* gray-800 */
-  border-color: rgb(75 85 99); /* gray-600 */
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
+  background: #22232b; /* Slightly lighter than main background */
+  border: 1px solid #282a36; /* Soft border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Soft shadow */
+  transition: all 0.2s ease;
 }
 
 /* Text gradient that works in dark mode */
@@ -513,7 +556,7 @@
 }
 
 .dark .text-gradient {
-  background: linear-gradient(135deg, #FF6B47 0%, #FF8A73 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #0099ff 50%, #2dd4bf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -591,660 +634,352 @@
   color: #ffffff !important;
 } 
 
-/* COMPREHENSIVE DARK MODE - MODERN & PROFESSIONAL */
+/* MODERN CHARCOAL THEME - COMPREHENSIVE STYLING */
 
-/* Body and base dark mode styling */
-.dark body {
-  background-color: #0f172a; /* slate-900 */
-  color: #f8fafc; /* slate-50 */
-}
-
-/* Typography in dark mode */
+/* Typography improvements */
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: #ffffff !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: #e0e0e6 !important; /* Soft warm white */
+  font-weight: 600 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.01em !important;
 }
 
-.dark p {
-  color: #e2e8f0 !important; /* slate-200 */
+.dark p, .dark span {
+  color: #e0e0e6 !important; /* Primary text */
+  line-height: 1.15 !important;
 }
 
-.dark span {
-  color: #e2e8f0 !important; /* slate-200 */
-}
-
-/* Section backgrounds */
-.dark section {
-  background-color: #0f172a; /* slate-900 */
-}
-
-.dark .bg-white {
-  background-color: #0f172a !important; /* slate-900 */
-}
-
-.dark .bg-gray-50 {
-  background-color: #1e293b !important; /* slate-800 */
-}
-
-.dark .bg-gray-100 {
-  background-color: #334155 !important; /* slate-700 */
-}
-
-/* Card styling in dark mode */
-.dark .card,
-.dark [class*="card"] {
-  background-color: #1e293b !important; /* slate-800 */
-  border-color: #475569 !important; /* slate-600 */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
-}
-
-.dark .card *,
-.dark [class*="card"] * {
-  color: #ffffff !important;
-}
-
-/* Button styling in dark mode */
-.dark .btn-secondary {
-  background-color: #475569 !important; /* slate-600 */
-  border-color: #64748b !important; /* slate-500 */
-  color: #ffffff !important;
-}
-
-.dark .btn-secondary:hover {
-  background-color: #64748b !important; /* slate-500 */
-}
-
-.dark .btn-ghost {
-  color: #e2e8f0 !important; /* slate-200 */
-}
-
-.dark .btn-ghost:hover {
-  background-color: #334155 !important; /* slate-700 */
-  color: #ffffff !important;
-}
-
-.dark .btn-outline {
-  border-color: #e11d48 !important; /* red-600 - brand primary */
-  color: #ffffff !important;
-  background-color: transparent !important;
-}
-
-.dark .btn-outline:hover {
-  background-color: #e11d48 !important;
-  color: #ffffff !important;
-}
-
-/* Form elements in dark mode */
-.dark .input,
-.dark input,
-.dark textarea,
-.dark select {
-  background-color: #1e293b !important; /* slate-800 */
-  border-color: #475569 !important; /* slate-600 */
-  color: #ffffff !important;
-}
-
-.dark .input::placeholder,
-.dark input::placeholder,
-.dark textarea::placeholder {
-  color: #94a3b8 !important; /* slate-400 */
-}
-
-.dark .label {
-  color: #f1f5f9 !important; /* slate-100 */
-}
-
-/* Navigation in dark mode */
-.dark nav,
-.dark .navbar,
-.dark header {
-  background-color: #0f172a !important; /* slate-900 */
-  border-color: #334155 !important; /* slate-700 */
-}
-
-.dark .nav-link,
-.dark nav a,
-.dark nav button {
-  color: #e2e8f0 !important; /* slate-200 */
-}
-
-.dark .nav-link:hover,
-.dark nav a:hover,
-.dark nav button:hover {
-  color: #ffffff !important;
-}
-
-/* Mobile menu in dark mode */
-.dark .mobile-menu {
-  background-color: #1e293b !important; /* slate-800 */
-  border-color: #475569 !important; /* slate-600 */
-}
-
-/* Footer in dark mode */
-.dark footer {
-  background-color: #020617 !important; /* slate-950 */
-  color: #e2e8f0 !important; /* slate-200 */
-}
-
-.dark footer a {
-  color: #cbd5e1 !important; /* slate-300 */
-}
-
-.dark footer a:hover {
-  color: #ffffff !important;
-}
-
-/* Text color overrides for specific gray classes */
-.dark .text-gray-600 {
-  color: #e2e8f0 !important; /* slate-200 */
-}
-
-.dark .text-gray-700 {
-  color: #f1f5f9 !important; /* slate-100 */
-}
-
-.dark .text-gray-500 {
-  color: #cbd5e1 !important; /* slate-300 */
-}
-
-.dark .text-gray-400 {
-  color: #94a3b8 !important; /* slate-400 */
-}
-
-/* Service cards specific styling */
-.dark [class*="service"] {
-  background-color: #1e293b !important; /* slate-800 */
-  border-color: #475569 !important; /* slate-600 */
-}
-
-.dark [class*="service"] h3,
-.dark [class*="service"] p,
-.dark [class*="service"] span {
-  color: #ffffff !important;
-}
-
-/* Client logo cards */
-.dark [class*="client"] {
-  background-color: #1e293b !important; /* slate-800 */
-  border-color: #475569 !important; /* slate-600 */
-}
-
-.dark [class*="client"]:hover {
-  background-color: #334155 !important; /* slate-700 */
-}
-
-.dark [class*="client"] h3,
-.dark [class*="client"] p,
-.dark [class*="client"] span {
-  color: #ffffff !important;
-}
-
-/* Stats cards */
-.dark [class*="stat"] {
-  background-color: #1e293b !important; /* slate-800 */
-  border-color: #475569 !important; /* slate-600 */
-}
-
-.dark [class*="stat"] * {
-  color: #ffffff !important;
-}
-
-/* Process step cards */
-.dark [class*="process"] {
-  background-color: #1e293b !important; /* slate-800 */
-  border-color: #475569 !important; /* slate-600 */
-}
-
-.dark [class*="process"] * {
-  color: #ffffff !important;
-}
-
-/* Testimonial cards */
-.dark [class*="testimonial"] {
-  background-color: #1e293b !important; /* slate-800 */
-  border-color: #475569 !important; /* slate-600 */
-}
-
-.dark [class*="testimonial"] * {
-  color: #ffffff !important;
-}
-
-/* Trust indicators and badges */
-.dark .bg-green-50 {
-  background-color: rgba(16, 185, 129, 0.2) !important; /* emerald with opacity */
-  border: 1px solid rgba(16, 185, 129, 0.3) !important;
-}
-
-.dark .text-green-700 {
-  color: #a7f3d0 !important; /* emerald-200 */
-}
-
-/* Dropdown menus */
-.dark [class*="dropdown"],
-.dark .absolute {
-  background-color: #1e293b !important; /* slate-800 */
-  border-color: #475569 !important; /* slate-600 */
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Hero section gradient */
-.dark .hero-gradient {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
-}
-
-/* Text gradient in dark mode */
-.dark .text-gradient {
-  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%) !important; /* orange gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Scrollbar styling for dark mode */
-.dark::-webkit-scrollbar {
-  width: 8px;
-}
-
-.dark::-webkit-scrollbar-track {
-  background: #1e293b; /* slate-800 */
-}
-
-.dark::-webkit-scrollbar-thumb {
-  background: #475569; /* slate-600 */
-  border-radius: 4px;
-}
-
-.dark::-webkit-scrollbar-thumb:hover {
-  background: #64748b; /* slate-500 */
-}
-
-/* Selection styling in dark mode */
-.dark ::selection {
-  background-color: #e11d48; /* red-600 */
-  color: #ffffff;
-}
-
-/* Focus styles in dark mode */
-.dark *:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px #e11d48; /* red-600 */
-}
-
-/* Ensure icons are visible in dark mode */
-.dark svg {
-  color: inherit !important;
-}
-
-/* Make sure all text in containers is properly colored */
-.dark .container *,
-.dark .max-w-7xl *,
-.dark .max-w-4xl *,
-.dark .max-w-3xl * {
-  color: inherit;
-}
-
-/* Hero section specific fixes */
-.dark .hero-section {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-}
-
-/* Make sure feature lists are visible */
-.dark .feature-list li {
-  color: #e2e8f0 !important; /* slate-200 */
-}
-
-/* Ensure proper contrast for all interactive elements */
-.dark button,
-.dark a {
-  color: inherit;
-}
-
-.dark button:hover,
-.dark a:hover {
-  color: #ffffff !important;
-} 
-
-/* ADDITIONAL DARK MODE FIXES - MAXIMUM CONTRAST */
-
-/* Force all text to be bright in dark mode - AGGRESSIVE APPROACH */
-.dark * {
-  color: #ffffff !important;
-}
-
-/* Override specific text colors that should be bright */
+/* Secondary text elements */
 .dark .text-gray-600,
 .dark .text-gray-700,
 .dark .text-gray-500,
 .dark .text-gray-800,
 .dark .text-gray-400 {
-  color: #f1f5f9 !important; /* Very bright gray */
+  color: #b0b3b8 !important; /* Dimmed gray for secondary info */
 }
 
-/* Ensure all headings are pure white */
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: #ffffff !important;
+/* Dividers and separators */
+.dark .divider,
+.dark hr,
+.dark [class*="divider"] {
+  border-color: #23242b !important; /* Super subtle */
+  background: #292933 !important;
+}
+
+/* Enhanced text gradient with modern colors */
+.dark .text-gradient {
+  background: linear-gradient(135deg, #3b82f6 0%, #0099ff 50%, #2dd4bf 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  position: relative;
   font-weight: 700 !important;
-}
-
-/* Ensure all paragraphs are bright */
-.dark p {
-  color: #f1f5f9 !important; /* slate-100 */
-}
-
-/* Ensure all spans are bright */
-.dark span {
-  color: #f1f5f9 !important; /* slate-100 */
-}
-
-/* Ensure all divs have proper text color */
-.dark div {
-  color: #f1f5f9 !important;
-}
-
-/* Fix specific components that might be hard to read */
-.dark .hero-section *,
-.dark [class*="hero"] * {
-  color: #ffffff !important;
-}
-
-.dark .stats-section *,
-.dark [class*="stats"] *,
-.dark [class*="track"] * {
-  color: #ffffff !important;
-}
-
-/* Fix any remaining low contrast text */
-.dark .container *,
-.dark .section * {
-  color: #f8fafc !important; /* slate-50 - very bright */
-}
-
-/* Ensure brand text is visible */
-.dark .text-brand-secondary {
-  color: #ffffff !important;
-}
-
-/* Fix muted text to still be readable */
-.dark .text-muted,
-.dark [class*="muted"] {
-  color: #cbd5e1 !important; /* slate-300 */
-}
-
-/* Fix any opacity issues */
-.dark * {
-  opacity: 1 !important;
-}
-
-/* Override any low opacity text */
-.dark .opacity-50,
-.dark .opacity-60,
-.dark .opacity-70 {
-  opacity: 1 !important;
-  color: #f1f5f9 !important;
-}
-
-/* Fix specific gradient text that might be hard to read */
-.dark .bg-gradient-to-br {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
-}
-
-/* Ensure all buttons have proper text color */
-.dark button {
-  color: #ffffff !important;
-}
-
-.dark button * {
-  color: inherit !important;
-}
-
-/* Fix any remaining problematic selectors */
-.dark .max-w-2xl *,
-.dark .max-w-3xl *,
-.dark .max-w-4xl *,
-.dark .max-w-5xl *,
-.dark .max-w-6xl *,
-.dark .max-w-7xl * {
-  color: #f8fafc !important;
-}
-
-/* Fix text in grid layouts */
-.dark .grid *,
-.dark .flex * {
-  color: #f8fafc !important;
-}
-
-/* Hero section specific fixes */
-.dark .hero-gradient {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
-}
-
-.dark .hero-gradient * {
-  color: #ffffff !important;
-}
-
-/* Track record section fix */
-.dark [class*="track"] h2,
-.dark [class*="track"] h3,
-.dark [class*="track"] p {
-  color: #ffffff !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
-}
-
-/* Stats and numbers should be bright white */
-.dark .text-4xl,
-.dark .text-5xl,
-.dark .text-6xl,
-.dark .text-7xl {
-  color: #ffffff !important;
-  font-weight: 800 !important;
-}
-
-/* Subheadings should be bright */
-.dark .text-lg,
-.dark .text-xl,
-.dark .text-2xl {
-  color: #f1f5f9 !important;
-}
-
-/* Small text should still be readable */
-.dark .text-sm,
-.dark .text-xs {
-  color: #e2e8f0 !important;
-} 
-
-/* Fix specific background boxes and text gradient containers in dark mode */
-
-/* Text gradient background fixes */
-.dark .text-gradient {
-  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  position: relative;
-}
-
-/* Fix any background boxes behind gradient text */
-.dark .text-gradient::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: -8px;
-  right: -8px;
-  bottom: -4px;
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(251, 146, 60, 0.1) 100%);
-  border-radius: 8px;
-  z-index: -1;
-}
-
-/* Fix service cards and containers in dark mode */
-.dark .bg-brand-primary\/10 {
-  background-color: rgba(239, 68, 68, 0.2) !important; /* red with opacity */
-  border: 1px solid rgba(239, 68, 68, 0.3) !important;
-}
-
-/* Fix trust indicator badges */
-.dark .bg-green-50 {
-  background-color: rgba(16, 185, 129, 0.15) !important;
-  border: 1px solid rgba(16, 185, 129, 0.25) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-/* Fix any orange/red background containers */
-.dark .bg-orange-50,
-.dark .bg-red-50,
-.dark .bg-yellow-50 {
-  background-color: rgba(249, 115, 22, 0.15) !important;
-  border: 1px solid rgba(249, 115, 22, 0.25) !important;
-}
-
-/* Fix text containers and spans that might have backgrounds */
-.dark span[class*="bg-"],
-.dark div[class*="bg-"] {
-  background-color: rgba(30, 41, 59, 0.8) !important; /* slate-800 with opacity */
-  border-radius: 8px;
-  padding: 4px 8px;
-  border: 1px solid rgba(71, 85, 105, 0.3) !important;
-}
-
-/* Fix hero section background pattern/boxes */
-.dark .hero-pattern,
-.dark [class*="pattern"],
-.dark [class*="background"] {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%) !important;
-  border: 1px solid rgba(71, 85, 105, 0.2) !important;
-}
-
-/* Fix service section background containers */
-.dark .service-container,
-.dark .services-grid > *,
-.dark [class*="service-"] {
-  background-color: rgba(30, 41, 59, 0.9) !important;
-  border: 1px solid rgba(71, 85, 105, 0.4) !important;
-  border-radius: 12px;
-  backdrop-filter: blur(10px) !important;
-}
-
-/* Fix any floating elements or badges */
-.dark .badge,
-.dark .chip,
-.dark [class*="badge"],
-.dark [class*="chip"] {
-  background-color: rgba(30, 41, 59, 0.9) !important;
-  border: 1px solid rgba(71, 85, 105, 0.5) !important;
-  color: #ffffff !important;
-}
-
-/* Fix section headers with background elements */
-.dark .section-header,
-.dark .header-container {
-  background: transparent !important;
-  border: none !important;
-}
-
-/* Fix any problematic background overlays */
-.dark .overlay,
-.dark [class*="overlay"] {
-  background: rgba(15, 23, 42, 0.8) !important;
-  backdrop-filter: blur(8px) !important;
-}
-
-/* Ensure text shadows work well with backgrounds */
-.dark h1, .dark h2 {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
-}
-
-/* Fix any remaining background containers */
-.dark .container > div,
-.dark .section > div {
-  background: transparent !important;
-} 
-
-/* Enhanced text gradient styling for better dark mode appearance */
-.dark .text-gradient {
-  background: linear-gradient(135deg, #ff6b35 0%, #f9844a 25%, #ff8f65 50%, #ffab80 75%, #ffc299 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  position: relative;
-  font-weight: 800 !important;
   letter-spacing: -0.02em !important;
   line-height: 1.1 !important;
-  filter: drop-shadow(0 1px 2px rgba(255, 107, 53, 0.4)) 
-          drop-shadow(0 2px 4px rgba(255, 107, 53, 0.3)) 
-          drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2)) !important;
 }
 
-/* Organic multi-layer glow effect - Outer glow */
+/* Clean gradient glow effect */
 .dark .text-gradient::before {
   content: '';
   position: absolute;
-  top: -20px;
-  left: -25px;
-  right: -25px;
-  bottom: -20px;
-  background: radial-gradient(ellipse at center, 
-              rgba(255, 107, 53, 0.15) 0%, 
-              rgba(255, 107, 53, 0.08) 30%, 
-              rgba(255, 107, 53, 0.04) 60%, 
+  top: -10px;
+  left: -15px;
+  right: -15px;
+  bottom: -10px;
+  background: radial-gradient(ellipse 100% 60% at center, 
+              rgba(59, 130, 246, 0.1) 0%, 
+              rgba(59, 130, 246, 0.05) 50%, 
               transparent 100%);
-  border-radius: 50% / 40%;
-  z-index: -3;
-  filter: blur(15px);
-  opacity: 0.8;
+  border-radius: 50% / 30%;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.6;
 }
 
-/* Medium glow layer */
-.dark .text-gradient::after {
+/* Professional hover effects */
+.dark button:hover,
+.dark .btn:hover,
+.dark [role="button"]:hover {
+  transform: translateY(-1px);
+  transition: all 0.2s ease !important;
+}
+
+.dark .card:hover,
+.dark [class*="card"]:hover {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Focus states with electric blue */
+.dark *:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 2px #3b82f6 !important;
+}
+
+/* Selection styling */
+.dark ::selection {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+/* Status colors - alerts and success */
+.dark .text-red-500,
+.dark .text-red-600,
+.dark .bg-red-500 {
+  color: #ef4444 !important; /* Saturated red */
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+.dark .text-green-500,
+.dark .text-green-600,
+.dark .bg-green-500 {
+  color: #22d3ee !important; /* Lime green */
+  background-color: rgba(34, 211, 238, 0.1) !important;
+}
+
+/* Enhanced scrollbar */
+.dark::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark::-webkit-scrollbar-track {
+  background: #22232b;
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Professional loading states */
+.dark .skeleton {
+  background: linear-gradient(90deg, 
+              #22232b 0%, 
+              rgba(59, 130, 246, 0.1) 50%, 
+              #22232b 100%) !important;
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Enhanced backdrop effects */
+.dark .backdrop,
+.dark [class*="backdrop"] {
+  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(24, 26, 32, 0.95) !important;
+  border: 1px solid #282a36 !important;
+}
+
+/* Professional notification styling */
+.dark .alert,
+.dark .notification,
+.dark [class*="alert"],
+.dark [class*="notification"] {
+  background: #22232b !important;
+  border: 1px solid #282a36 !important;
+  color: #e0e0e6 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Fix any remaining background issues */
+.dark .bg-white {
+  background-color: #22232b !important;
+}
+
+.dark .bg-gray-50,
+.dark .bg-gray-100 {
+  background-color: #22232b !important;
+}
+
+/* Ensure proper contrast for all text */
+.dark * {
+  transition: all 0.2s ease;
+}
+
+/* Professional borders */
+.dark .border,
+.dark [class*="border"] {
+  border-color: #282a36 !important;
+}
+
+/* Enhanced navbar styling */
+.dark .navbar-sticky {
+  background: rgba(24, 26, 32, 0.95) !important;
+  border-bottom: 1px solid #23242b !important;
+  backdrop-filter: blur(20px);
+}
+
+/* Footer improvements */
+.dark footer {
+  background-color: #18181c !important;
+  border-top: 1px solid #23242b !important;
+}
+
+.dark footer a {
+  color: #b0b3b8 !important;
+  transition: all 0.2s ease !important;
+}
+
+.dark footer a:hover {
+  color: #3b82f6 !important;
+}
+
+/* BRAND PRIMARY TO ELECTRIC BLUE CONVERSION - DARK MODE */
+
+/* Convert all brand-primary backgrounds to electric blue in dark mode */
+.dark .bg-brand-primary,
+.dark [class*="bg-brand-primary"] {
+  background-color: #3b82f6 !important;
+}
+
+/* Convert brand-primary text to electric blue in dark mode */
+.dark .text-brand-primary,
+.dark [class*="text-brand-primary"] {
+  color: #3b82f6 !important;
+}
+
+/* Convert brand-primary borders to electric blue in dark mode */
+.dark .border-brand-primary,
+.dark [class*="border-brand-primary"] {
+  border-color: #3b82f6 !important;
+}
+
+/* Convert brand-primary/opacity backgrounds to electric blue in dark mode */
+.dark .bg-brand-primary\/10,
+.dark .bg-brand-primary\/5,
+.dark .bg-brand-primary\/20 {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Convert orange gradient backgrounds to blue/slate in dark mode */
+.dark .bg-gradient-to-r.from-brand-primary,
+.dark .bg-gradient-to-br.from-brand-primary {
+  background: linear-gradient(135deg, #475569 0%, #64748b 100%) !important;
+}
+
+.dark .from-brand-primary.to-red-600,
+.dark .from-brand-primary.to-red-500 {
+  background: linear-gradient(135deg, #475569 0%, #64748b 100%) !important;
+}
+
+/* Electric blue accent overlay for gradient sections in dark mode */
+.dark .bg-gradient-to-r.from-brand-primary::after,
+.dark .bg-gradient-to-br.from-brand-primary::after {
   content: '';
   position: absolute;
-  top: -12px;
-  left: -18px;
-  right: -18px;
-  bottom: -12px;
-  background: radial-gradient(ellipse at center, 
-              rgba(255, 139, 101, 0.25) 0%, 
-              rgba(255, 139, 101, 0.15) 40%, 
-              rgba(255, 139, 101, 0.08) 70%, 
-              transparent 100%);
-  border-radius: 60% / 45%;
-  z-index: -2;
-  filter: blur(8px);
-  opacity: 0.9;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 100%);
+  pointer-events: none;
 }
 
-/* Inner subtle glow using box-shadow for better control */
-.dark .text-gradient {
-  text-shadow: 
-    0 0 10px rgba(255, 107, 53, 0.3),
-    0 0 20px rgba(255, 107, 53, 0.2),
-    0 0 30px rgba(255, 107, 53, 0.1),
-    0 2px 4px rgba(0, 0, 0, 0.3);
+/* CTA and special sections with gradients */
+.dark .section.bg-brand-primary {
+  background: linear-gradient(135deg, #475569 0%, #64748b 100%) !important;
+  position: relative;
 }
 
-/* Special enhancement for large headings */
-.dark h1 .text-gradient {
-  text-shadow: 
-    0 0 15px rgba(255, 107, 53, 0.4),
-    0 0 30px rgba(255, 107, 53, 0.25),
-    0 0 45px rgba(255, 107, 53, 0.15),
-    0 0 60px rgba(255, 107, 53, 0.08),
-    0 3px 6px rgba(0, 0, 0, 0.4);
+.dark .section.bg-brand-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(34, 211, 238, 0.05) 100%);
+  pointer-events: none;
 }
 
-/* Breathing animation for enhanced effect */
-.dark .text-gradient {
-  animation: gentle-glow 4s ease-in-out infinite alternate;
+/* Focus ring conversion */
+.dark .focus\:ring-brand-primary:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
 }
 
-@keyframes gentle-glow {
-  0% { 
-    filter: drop-shadow(0 1px 2px rgba(255, 107, 53, 0.4)) 
-            drop-shadow(0 2px 4px rgba(255, 107, 53, 0.3)) 
-            drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-  }
-  100% { 
-    filter: drop-shadow(0 1px 3px rgba(255, 107, 53, 0.5)) 
-            drop-shadow(0 3px 6px rgba(255, 107, 53, 0.4)) 
-            drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
-  }
+/* Button hover states conversion */
+.dark .hover\:bg-brand-primary:hover {
+  background-color: #3b82f6 !important;
+}
+
+.dark .hover\:bg-brand-primary\/90:hover {
+  background-color: rgba(59, 130, 246, 0.9) !important;
+}
+
+/* Special styling for hero and header sections */
+.dark .bg-gradient-to-br.from-brand-primary\/5 {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(34, 211, 238, 0.03) 100%) !important;
+}
+
+/* Ensure brand dots and decorative elements use electric blue */
+.dark .w-2.h-2.bg-brand-primary,
+.dark .w-1.h-1.bg-brand-primary {
+  background-color: #3b82f6 !important;
+}
+
+/* Large decorative elements */
+.dark .w-32.h-32.bg-brand-primary,
+.dark .w-40.h-40.bg-brand-primary,
+.dark .w-20.h-20.bg-brand-primary {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+  filter: blur(60px) !important;
+}
+
+/* Icon containers */
+.dark .w-16.h-16.bg-brand-primary,
+.dark .w-12.h-12.bg-brand-primary,
+.dark .w-10.h-10.bg-brand-primary {
+  background-color: #3b82f6 !important;
+}
+
+/* Hover effects for cards and interactive elements */
+.dark .group:hover .group-hover\:bg-brand-primary {
+  background-color: #3b82f6 !important;
+}
+
+/* Special navbar and footer elements */
+.dark .bg-brand-primary.rounded-lg,
+.dark .bg-brand-primary.rounded-xl {
+  background-color: #3b82f6 !important;
+}
+
+/* Form elements with brand-primary */
+.dark .border-brand-primary.bg-brand-primary\/5 {
+  border-color: #3b82f6 !important;
+  background-color: rgba(59, 130, 246, 0.05) !important;
+}
+
+/* Success indicators and check icons in dark mode */
+.dark .text-green-300,
+.dark .text-green-400,
+.dark .text-green-500 {
+  color: #22d3ee !important; /* Use our lime green status color */
+}
+
+/* Green background elements */
+.dark .bg-green-50,
+.dark .bg-green-100 {
+  background-color: rgba(34, 211, 238, 0.1) !important;
+  border-color: rgba(34, 211, 238, 0.2) !important;
+}
+
+/* Ensure all orange to red gradients are converted in dark mode */
+.dark .bg-gradient-to-r.from-red-600,
+.dark .bg-gradient-to-br.to-red-600,
+.dark .bg-gradient-to-br.to-red-500 {
+  background: linear-gradient(135deg, #475569 0%, #64748b 100%) !important;
+}
+
+/* Special CTA section backgrounds */
+.dark .bg-gradient-to-br.from-brand-primary.to-red-600 {
+  background: linear-gradient(135deg, #22232b 0%, #2a2b35 100%) !important;
+  border: 1px solid #282a36 !important;
+}
+
+/* Ensure proper relative positioning for overlay effects */
+.dark .section {
+  position: relative;
+}
+
+/* Professional shadow effects for dark mode */
+.dark .shadow-brand {
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.1), 0 1px 3px rgba(59, 130, 246, 0.08) !important;
 } 
