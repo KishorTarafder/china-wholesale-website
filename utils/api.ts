@@ -12,7 +12,9 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import toast from 'react-hot-toast';
 
 // API Configuration
-const API_BASE_URL = 'https://chwh.store/backend/api';
+const API_BASE_URL =
+  (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_API_URL) ||
+  'https://chwh.store/backend/api';
 const REQUEST_TIMEOUT = 10000; // 10 seconds
 
 /**

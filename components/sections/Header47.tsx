@@ -72,12 +72,12 @@ export const Header47: React.FC = () => {
   return (
     <section 
       ref={ref} 
-      className="section-lg bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+      className="section-lg bg-gradient-to-br from-gray-50 to-white relative overflow-hidden dark:bg-transparent dark:from-transparent dark:to-transparent"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-brand-primary rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-brand-primary rounded-full blur-3xl dark:bg-blue-500/20"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl dark:bg-cyan-400/15"></div>
       </div>
 
       <div className="container relative">
@@ -92,7 +92,7 @@ export const Header47: React.FC = () => {
           >
             {/* Badge */}
             <motion.div variants={fadeInUp}>
-              <div className="inline-flex items-center px-4 py-2 bg-brand-primary/10 rounded-full text-brand-primary text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-brand-primary/10 rounded-full text-brand-primary text-sm font-medium dark:bg-blue-500/20 dark:text-blue-400 dark:border dark:border-white/10 dark:backdrop-blur-md">
                 <span className="w-2 h-2 bg-brand-primary rounded-full mr-2 animate-pulse"></span>
                 About China Wholesale
               </div>
@@ -108,22 +108,22 @@ export const Header47: React.FC = () => {
 
             {/* Description */}
             <motion.div variants={fadeInUp} className="space-y-6">
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed dark:text-gray-100/90">
                 Since our inception, <strong>China Wholesale</strong> has been dedicated to simplifying 
                 international trade for Bangladeshi businesses. We combine deep market knowledge with 
                 innovative logistics solutions to make global sourcing accessible, reliable, and profitable.
               </p>
               
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed dark:text-gray-100/90">
                 Our team of experts bridges cultural and business gaps, ensuring that every transaction 
                 is smooth, transparent, and delivers exceptional value to our clients.
               </p>
             </motion.div>
 
             {/* Mission Statement */}
-            <motion.div variants={fadeInUp} className="p-6 bg-white border-l-4 border-brand-primary rounded-lg shadow-sm">
+            <motion.div variants={fadeInUp} className="p-6 bg-white border-l-4 border-brand-primary rounded-lg shadow-sm dark:bg-white/10 dark:backdrop-blur-md dark:border-white/10 dark:shadow-none">
               <h3 className="text-lg font-semibold text-brand-secondary mb-2">Our Mission</h3>
-              <p className="text-gray-600 italic">
+              <p className="text-gray-600 italic dark:text-gray-100/90">
                 "To empower Bangladeshi entrepreneurs and businesses by providing seamless access to global 
                 markets through trusted sourcing, quality assurance, and reliable logistics."
               </p>
@@ -151,7 +151,7 @@ export const Header47: React.FC = () => {
           >
             <motion.div variants={fadeInUp} className="text-center lg:text-left mb-8">
               <h2 className="text-2xl font-bold text-brand-secondary mb-3">Our Core Values</h2>
-              <p className="text-gray-600">The principles that guide everything we do</p>
+              <p className="text-gray-600 dark:text-gray-100/90">The principles that guide everything we do</p>
             </motion.div>
 
             <div className="space-y-6">
@@ -162,10 +162,10 @@ export const Header47: React.FC = () => {
                     key={value.title}
                     variants={fadeInUp}
                     transition={{ delay: index * 0.1 }}
-                    className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+                    className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:bg-white/10 dark:border-white/10 dark:shadow-none dark:hover:bg-white/15 dark:backdrop-blur-md"
                   >
                     <div className="flex items-start space-x-4">
-                      <div className={`p-3 rounded-lg bg-gray-50 ${value.color}`}>
+                      <div className={`p-3 rounded-lg bg-gray-50 ${value.color} dark:bg-white/10`}>
                         <Icon size={24} />
                       </div>
                       <div className="flex-1">

@@ -2,9 +2,10 @@ import React from 'react';
 import { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import Header44 from '@/components/sections/Header44';
-import Contact25 from '@/components/sections/Contact25';
-import Contact2 from '@/components/sections/Contact2';
+import dynamic from 'next/dynamic';
+const Header44 = dynamic(() => import('@/components/sections/Header44'), { ssr: true });
+const Contact25 = dynamic(() => import('@/components/sections/Contact25'));
+const Contact2 = dynamic(() => import('@/components/sections/Contact2'));
 
 /**
  * Service Query Form Page

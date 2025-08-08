@@ -10,11 +10,12 @@
 import type { Metadata } from 'next';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { HowWeWork } from '@/components/sections/HowWeWork';
-import { Header44 } from '@/components/sections/Header44';
-import { Testimonials } from '@/components/sections/Testimonials';
-import { CallToAction } from '@/components/sections/CallToAction';
-import { Stats } from '@/components/sections/Stats';
+import dynamic from 'next/dynamic';
+const HowWeWork = dynamic(() => import('@/components/sections/HowWeWork'));
+const Header44 = dynamic(() => import('@/components/sections/Header44'), { ssr: true });
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'));
+const CallToAction = dynamic(() => import('@/components/sections/CallToAction'));
+const Stats = dynamic(() => import('@/components/sections/Stats'));
 
 // Page metadata for SEO
 export const metadata: Metadata = {

@@ -22,14 +22,15 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 // Section Components
-import Hero from '@/components/sections/Hero';
-import ServicesOverview from '@/components/sections/ServicesOverview';
-import HowWeWork from '@/components/sections/HowWeWork';
-import Testimonials from '@/components/sections/Testimonials';
-import Stats from '@/components/sections/Stats';
-import CallToAction from '@/components/sections/CallToAction';
-import ClientLogos from '@/components/sections/ClientLogos';
-import WhyChooseUs from '@/components/sections/WhyChooseUs';
+import dynamic from 'next/dynamic';
+const Hero = dynamic(() => import('@/components/sections/Hero'), { ssr: true });
+const ServicesOverview = dynamic(() => import('@/components/sections/ServicesOverview'));
+const HowWeWork = dynamic(() => import('@/components/sections/HowWeWork'));
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'));
+const Stats = dynamic(() => import('@/components/sections/Stats'));
+const CallToAction = dynamic(() => import('@/components/sections/CallToAction'));
+const ClientLogos = dynamic(() => import('@/components/sections/ClientLogos'));
+const WhyChooseUs = dynamic(() => import('@/components/sections/WhyChooseUs'));
 
 // Page-specific metadata
 export const metadata: Metadata = {

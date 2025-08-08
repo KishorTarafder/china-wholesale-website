@@ -2,11 +2,12 @@ import React from 'react';
 import { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import Header46 from '@/components/sections/Header46';
-import Contact13 from '@/components/sections/Contact13';
+import dynamic from 'next/dynamic';
+const Header46 = dynamic(() => import('@/components/sections/Header46'), { ssr: true });
+const Contact13 = dynamic(() => import('@/components/sections/Contact13'));
 import ContactForm from '@/components/forms/ContactForm';
-import Faq1 from '@/components/sections/Faq1';
-import Contact16 from '@/components/sections/Contact16';
+const Faq1 = dynamic(() => import('@/components/sections/Faq1'));
+const Contact16 = dynamic(() => import('@/components/sections/Contact16'));
 
 /**
  * Contact Page

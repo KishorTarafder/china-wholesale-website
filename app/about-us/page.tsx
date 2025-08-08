@@ -2,12 +2,13 @@ import React from 'react';
 import { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import Header47 from '@/components/sections/Header47';
-import Layout41 from '@/components/sections/Layout41';
-import Layout352 from '@/components/sections/Layout352';
-import Gallery7 from '@/components/sections/Gallery7';
-import Logo4 from '@/components/sections/Logo4';
-import Logo1 from '@/components/sections/Logo1';
+import dynamic from 'next/dynamic';
+const Header47 = dynamic(() => import('@/components/sections/Header47'), { ssr: true });
+const Layout41 = dynamic(() => import('@/components/sections/Layout41'));
+const Layout352 = dynamic(() => import('@/components/sections/Layout352'));
+const Gallery7 = dynamic(() => import('@/components/sections/Gallery7'));
+const Logo4 = dynamic(() => import('@/components/sections/Logo4'));
+const Logo1 = dynamic(() => import('@/components/sections/Logo1'));
 
 /**
  * About Us Page

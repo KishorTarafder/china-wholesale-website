@@ -2,13 +2,14 @@ import React from 'react';
 import { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import Header44 from '@/components/sections/Header44';
-import Layout10 from '@/components/sections/Layout10';
-import Layout24 from '@/components/sections/Layout24';
-import Layout6 from '@/components/sections/Layout6';
-import Layout192 from '@/components/sections/Layout192';
-import Layout3 from '@/components/sections/Layout3';
-import Cta7 from '@/components/sections/Cta7';
+import dynamic from 'next/dynamic';
+const Header44 = dynamic(() => import('@/components/sections/Header44'), { ssr: true });
+const Layout10 = dynamic(() => import('@/components/sections/Layout10'));
+const Layout24 = dynamic(() => import('@/components/sections/Layout24'));
+const Layout6 = dynamic(() => import('@/components/sections/Layout6'));
+const Layout192 = dynamic(() => import('@/components/sections/Layout192'));
+const Layout3 = dynamic(() => import('@/components/sections/Layout3'));
+const Cta7 = dynamic(() => import('@/components/sections/Cta7'));
 
 /**
  * Services Page

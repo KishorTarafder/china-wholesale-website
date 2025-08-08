@@ -125,10 +125,10 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 const BackgroundPattern: React.FC = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
     {/* Gradient overlay */}
-    <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white to-orange-50/50" />
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white to-orange-50/50 dark:from-transparent dark:via-transparent dark:to-transparent" />
     
     {/* Animated dots pattern */}
-    <div className="absolute inset-0 opacity-30">
+    <div className="absolute inset-0 opacity-30 dark:opacity-15">
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}

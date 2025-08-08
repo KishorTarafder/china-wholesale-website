@@ -15,7 +15,7 @@ export const Logo1: React.FC = () => {
   const { ref, isInView } = useIntersectionObserver({ threshold: 0.1, triggerOnce: true });
 
   return (
-    <section ref={ref} className="section bg-white">
+    <section ref={ref} className="section bg-white dark:bg-transparent">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,8 +27,8 @@ export const Logo1: React.FC = () => {
           <p className="text-gray-600 max-w-2xl mx-auto">
             Trusted brands and partnership logos - Coming Soon
           </p>
-          <div className="mt-8 p-8 bg-gray-50 rounded-2xl">
-            <p className="text-sm text-gray-500">Logo1 Component - Trusted Partnerships (In Development)</p>
+          <div className="mt-8 p-8 bg-gray-50 rounded-2xl dark:bg-white/10 dark:backdrop-blur-md dark:border dark:border-white/10">
+            <p className="text-sm text-gray-500 dark:text-gray-100/70">Logo1 Component - Trusted Partnerships (In Development)</p>
           </div>
         </motion.div>
       </div>
